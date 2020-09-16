@@ -10,7 +10,12 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+<div class="section mt-4">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-sm-8">
+        <main id="primary" class="site-main">
 
 		<?php /* if ( have_posts() ) : ?>
 
@@ -138,13 +143,16 @@ get_header();
 
 
 
+        </main><!-- #main -->
+      </div>
 
+      <div class="col-sm-4">
+        <?php get_sidebar(); ?>
+      </div>
 
-
-
-
-	</main><!-- #main -->
+    </div>
+  </div>
+</div>
 
 <?php
-// get_sidebar();
 get_footer();

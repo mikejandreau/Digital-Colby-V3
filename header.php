@@ -99,13 +99,14 @@
 
 
 
+
 <header class="masthead">
+  <div class="container h-100">
+    <div class="row h-100">
+      <div class="col-sm-12 align-self-center">
 
 <?php if ( is_front_page() ) : ?>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
           <h1 class="font-weight-light">Vertically Centered Masthead Content</h1>
           <p class="lead">A great starter layout for a landing page</p>
           <form role="search" method="get" class="form search-form" action="/index.php">
@@ -116,15 +117,9 @@
               </span>
             </div>
           </form>
-        </div>
-      </div>
-    </div>
 
 <?php else : ?>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
 <!-- 
           <h1 class="font-weight-light">Vertically Centered Masthead Content</h1>
           <p class="lead">A great starter layout for a landing page</p>
@@ -184,12 +179,12 @@
 
           <?php endif; ?>
 
-        </div>
-      </div>
-    </div>
 
 <?php endif; ?>
 
+      </div>
+    </div>
+  </div>
 </header>
 
 
