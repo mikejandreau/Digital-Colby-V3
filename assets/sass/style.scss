@@ -320,18 +320,25 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   margin-bottom: 2rem;
+  color: #fff;
 
   @include tablet {
     margin-bottom: 4rem;
   }
 
   h1 {
+    font-size: 3rem;
     margin-top: 0.5rem;
+    color: #fff;
   }
 
   .home & {
     height: 60vh;
     margin-bottom: 0;
+
+    h1 {
+      font-size: 4rem;
+    }
   }
 }
 
@@ -346,7 +353,11 @@ body {
 
 
 .post-thumbnail {
-  margin-bottom: $spacing_unit;
+
+  img {
+    display: block;
+    margin-bottom: $spacing_unit;
+  }
 }
 
 
@@ -653,26 +664,26 @@ article {
 }
 
 
-.about-section-image {
-    background: #fff;
-    border: 1px solid #eee;
-    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.2);
-    // margin-left: -4rem;
+// .about-section-image {
+//     background: #fff;
+//     border: 1px solid #eee;
+//     box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.2);
+//     // margin-left: -4rem;
 
-    img {
-      display: block;
+//     img {
+//       display: block;
 
-    }
-}
+//     }
+// }
 
 
-.about-section-text {
-    background: #fff;
-    padding: 2rem;
-    border: 1px solid #eee;
-    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.2);
-    margin-left: -4rem;
-}
+// .about-section-text {
+//     background: #fff;
+//     padding: 2rem;
+//     border: 1px solid #eee;
+//     box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.2);
+//     margin-left: -4rem;
+// }
 
 // // testing cards
 // @media (min-width: 34em) {

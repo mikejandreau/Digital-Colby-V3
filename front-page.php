@@ -95,7 +95,7 @@ get_header();
 
 
 
-
+<?php /*
 
   <section class="featured-section">
     <div class="container">
@@ -138,6 +138,9 @@ get_header();
 
 
   </section>
+
+*/ ?>
+
 
 
 
@@ -268,9 +271,8 @@ get_header();
 
 
 
+<?php /*
 
-
-  
   <div class="section about-section">
     <div class="container">
       <div class="row justify-content-center">
@@ -307,13 +309,13 @@ get_header();
 
 
 
-
-
-
       </div>
     </div>
   </div>
 
+*/ ?>
+
+  
 
 
 
@@ -336,12 +338,13 @@ get_header();
 
 
 
-  <div class="section">
+  <div class="featured-section">
     <div class="container">
       <div class="row">
 
-        <div class="column col-sm-12 text-center">
+        <div class="column col-sm-12">
           <h2>Featured Collections</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis explicabo accusantium atque repudiandae distinctio esse, porro ullam recusandae, tenetur perspiciatis beatae odit maxime facilis reprehenderit pariatur repellat quaerat magni, a.</p>
 
           <!-- <div class="feature portfolio-feature">
             <h2>Portfolio</h2>
@@ -393,7 +396,8 @@ get_header();
 
               while ( $loop->have_posts() ) : $loop->the_post(); 
                 /* pull category for each unique post using the ID  */
-                $terms = get_the_terms( $post->ID, 'portfolio-categories' ); 
+                $terms = get_the_terms( $post->ID, 'category' ); 
+                // $terms = get_the_terms( $post->ID, 'portfolio-categories' ); 
                 if ( $terms && ! is_wp_error( $terms ) ) : 
                   $links = array();
                   foreach ( $terms as $term ) {
@@ -434,7 +438,9 @@ get_header();
             ?>
           </div>
 
-          <a class="btn btn-primary" href="<?php echo get_post_type_archive_link( 'portfolio' ); ?>">View All</a>
+          <a class="btn btn-primary" href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">View All</a>
+
+
 
         </div>
 

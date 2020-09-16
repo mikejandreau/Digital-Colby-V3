@@ -4,19 +4,35 @@
 */
 
 // Find .grid in DOM
-var isotopeGridBlock = document.getElementsByClassName('grid');
+// var isotopeGridBlock = document.getElementsByClassName('grid');
 
-// Run Isotope if .grid is present 
-if (isotopeGridBlock.length > 0) {
-  var iso = new Isotope( '.grid', {
+// init Isotope
+var $grid = $('.grid').isotope({
     itemSelector: '.grid-item',
     // layoutMode: 'fitRows'
     layoutMode: 'masonry'
     // masonry: {
     //   columnWidth: 50
     // }
-  });
-}
+});
+// layout Isotope after each image loads
+$grid.imagesLoaded().progress( function() {
+  $grid.isotope('layout');
+});
+
+
+
+// // Run Isotope if .grid is present 
+// if (isotopeGridBlock.length > 0) {
+//   var iso = new Isotope( '.grid', {
+//     itemSelector: '.grid-item',
+//     // layoutMode: 'fitRows'
+//     layoutMode: 'masonry'
+//     // masonry: {
+//     //   columnWidth: 50
+//     // }
+//   });
+// }
 
 // bind filter button click
 var filtersElem = document.querySelector('.filter-buttons');

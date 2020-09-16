@@ -182,6 +182,10 @@ function dcv3_scripts() {
 	// izotope
 	wp_enqueue_script( 'dcv3-izotope-js', get_template_directory_uri() . '/assets/vendor/metafizzy/isotope.pkgd.min.js', array(), _S_VERSION, true );
 
+	// imagesloaded
+	wp_enqueue_script( 'dcv3-imagesloaded-js', get_template_directory_uri() . '/assets/vendor/metafizzy/imagesloaded.pkgd.js', array(), _S_VERSION, true );
+
+
 	// baguettebox
 	// wp_enqueue_script( 'dcv3-baguettebox-js', get_template_directory_uri() . '/assets/vendor/baguetteBox/baguetteBox.js', array(), _S_VERSION, true );
 

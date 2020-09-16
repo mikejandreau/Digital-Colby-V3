@@ -107,8 +107,8 @@
 
 <?php if ( is_front_page() ) : ?>
 
-          <h1 class="font-weight-light">Vertically Centered Masthead Content</h1>
-          <p class="lead">A great starter layout for a landing page</p>
+          <h1 class="font-weight-light">Home Page Stuff</h1>
+          <p class="lead">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
           <form role="search" method="get" class="form search-form" action="/index.php">
             <div class="input-group">
               <input name="s" type="text" class="form-control" placeholder="Search this site">
