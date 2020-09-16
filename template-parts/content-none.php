@@ -10,9 +10,11 @@
 ?>
 
 <section class="no-results not-found">
+	<?php /*
 	<header class="page-header">
 		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'dcv3' ); ?></h1>
 	</header><!-- .page-header -->
+	*/ ?>
 
 	<div class="page-content">
 		<?php

@@ -259,7 +259,7 @@ require get_template_directory() . '/inc/theme-options/theme-options.php';
 /*
  * Custom post type for Portfolio Items
  */
-require get_template_directory() . '/inc/custom-post-portfolio.php';
+// require get_template_directory() . '/inc/custom-post-portfolio.php';
 
 
 

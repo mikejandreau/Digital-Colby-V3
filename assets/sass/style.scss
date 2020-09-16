@@ -313,16 +313,26 @@ body {
 // }
 
 .masthead {
-  height: 30vh;
-  min-height: 300px;
-  background-image: url('https://source.unsplash.com/BtbjCFUvBXs/1920x1080');
+  height: 20vh;
+  min-height: 200px;
+  background-image: url('https://source.unsplash.com/WLUHO9A_xik/1920x1080');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  margin-bottom: 2rem;
 
- .home & {
-  height: 60vh;
- }
+  @include tablet {
+    margin-bottom: 4rem;
+  }
+
+  h1 {
+    margin-top: 0.5rem;
+  }
+
+  .home & {
+    height: 60vh;
+    margin-bottom: 0;
+  }
 }
 
 
@@ -335,13 +345,53 @@ body {
 }
 
 
+.post-thumbnail {
+  margin-bottom: $spacing_unit;
+}
 
 
+// Previous/Next links on single posts
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+.post-navigation {
+  margin: 0 0 $spacing_unit;
+
+  // a {
+  //   display: block;
+  //   text-align: center;
+  //   border:none;
+  //   text-decoration: none;
+  //   margin-bottom: $column_margin * 2;
+  //   padding: 6rem $column_margin;
+  //   color: #fff;
+  //   background-color:rgba(0,0,0,0.1);
+  //   transition: background-color $transistion_duration;
+
+  //   &:hover {
+  //     background-color:rgba(0,0,0,0.5);
+  //   }
+
+  //   // @include phablet {
+  //   //   height: 20rem;
+  //   // }
+  // }
+
+  h5 {
+    // @include bgImage;
+    margin-bottom: .55rem;
+  }
+}
 
 
+// Post spacing for lists of posts
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+article {
+  margin-bottom: $column_margin * 2;
 
-
-
+  & + article {
+    border-top: 1px solid #efefef;
+    padding-top: $column_margin * 2;
+  }
+}
 
 
 
@@ -581,11 +631,11 @@ body {
   @include tablet {
     padding: 6rem 0;
   }
-
 }
 
 .special-feature {
-  background-image: url('https://source.unsplash.com/BtbjCFUvBXs/1920x1080');
+  // background-image: url('https://source.unsplash.com/BtbjCFUvBXs/1920x1080');
+  background-image: url('https://source.unsplash.com/WLUHO9A_xik/1920x1080');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

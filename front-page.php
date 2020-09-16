@@ -23,36 +23,36 @@ get_header();
         <div class="row">
 
           <div class="col-lg-4 mb-4">
-            <div class="card h-100">
-              <h4 class="card-header">Card Title</h4>
-              <div class="card-body">
+            <div class="card h-100 border-0">
+              <img class="card-img-top" src="https://source.unsplash.com/WLUHO9A_xik/1920x1080" alt="Card image">
+              <div class="card-body px-0">
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
               </div>
-              <div class="card-footer">
+              <div class="card-footer p-0 border-0 bg-white">
                 <a href="#" class="btn btn-primary">Learn More</a>
               </div>
             </div>
           </div>
 
           <div class="col-lg-4 mb-4">
-            <div class="card h-100">
-              <h4 class="card-header">Card Title</h4>
-              <div class="card-body">
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ipsam eos, nam perspiciatis natus commodi similique totam consectetur praesentium molestiae atque exercitationem ut consequuntur, sed eveniet, magni nostrum sint fuga.</p>
+            <div class="card h-100 border-0">
+              <img class="card-img-top" src="https://source.unsplash.com/WLUHO9A_xik/1920x1080" alt="Card image">
+              <div class="card-body px-0">
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
               </div>
-              <div class="card-footer">
+              <div class="card-footer p-0 border-0 bg-white">
                 <a href="#" class="btn btn-primary">Learn More</a>
               </div>
             </div>
           </div>
 
           <div class="col-lg-4 mb-4">
-            <div class="card h-100">
-              <h4 class="card-header">Card Title</h4>
-              <div class="card-body">
+            <div class="card h-100 border-0">
+              <img class="card-img-top" src="https://source.unsplash.com/WLUHO9A_xik/1920x1080" alt="Card image">
+              <div class="card-body px-0">
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
               </div>
-              <div class="card-footer">
+              <div class="card-footer p-0 border-0 bg-white">
                 <a href="#" class="btn btn-primary">Learn More</a>
               </div>
             </div>
@@ -102,37 +102,32 @@ get_header();
     <h2>Featured Collecions</h2>
       <div class="row">
 
+
         <div class="col-lg-4 mb-4">
           <div class="card h-100">
-            <h4 class="card-header">Card Title</h4>
+            <img class="card-img-top" src="https://source.unsplash.com/WLUHO9A_xik/1920x1080" alt="Card image">
             <div class="card-body">
               <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
-            </div>
-            <div class="card-footer">
               <a href="#" class="btn btn-primary">Learn More</a>
             </div>
           </div>
         </div>
-        
+
         <div class="col-lg-4 mb-4">
           <div class="card h-100">
-            <h4 class="card-header">Card Title</h4>
+            <img class="card-img-top" src="https://source.unsplash.com/WLUHO9A_xik/1920x1080" alt="Card image">
             <div class="card-body">
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ipsam eos, nam perspiciatis natus commodi similique totam consectetur praesentium molestiae atque exercitationem ut consequuntur, sed eveniet, magni nostrum sint fuga.</p>
-            </div>
-            <div class="card-footer">
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
               <a href="#" class="btn btn-primary">Learn More</a>
             </div>
           </div>
         </div>
-        
+
         <div class="col-lg-4 mb-4">
           <div class="card h-100">
-            <h4 class="card-header">Card Title</h4>
+            <img class="card-img-top" src="https://source.unsplash.com/WLUHO9A_xik/1920x1080" alt="Card image">
             <div class="card-body">
               <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
-            </div>
-            <div class="card-footer">
               <a href="#" class="btn btn-primary">Learn More</a>
             </div>
           </div>
@@ -145,12 +140,6 @@ get_header();
   </section>
 
 
-
-
-
-
-
-<h2>Some More Stuff</h2>
 
 
 
@@ -378,9 +367,9 @@ get_header();
           <div class="button-group filter-buttons">
             <button class="is-checked" data-filter="*">Show All</button>
             <?php 
-              // $terms = get_terms("category"); // get all categories, but you can use any taxonomy
+              $terms = get_terms("category"); // get all categories, but you can use any taxonomy
               // $terms = get_terms('category', array('parent' => 37)); // get specific parent category by ID
-              $terms = get_terms("portfolio-categories"); // get portfolio items, taxonomy set in functions.php
+              // $terms = get_terms("portfolio-categories"); // get portfolio items, taxonomy set in functions.php
               $count = count($terms); //How many are they?
               if ( $count > 0 ){  //If there are more than 0 terms
                 foreach ( $terms as $term ) {  //for each term:
@@ -396,7 +385,7 @@ get_header();
 
             <?php // Query the custom post type only
               $args = array( 
-                'post_type' => 'portfolio', 
+                // 'post_type' => 'portfolio', 
                 'posts_per_page' => 12, // change 12 to -1 to get ALL posts
                 'offset' => 0,  // Set this to 1 to skip over first post, 2 to skip the first two, etc.
                );
