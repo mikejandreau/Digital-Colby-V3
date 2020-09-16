@@ -1,0 +1,154 @@
+.login {
+	background-color: #ddd;
+	/*background: -webkit-linear-gradient(225deg, rgba(37, 57, 189, 0.9), rgba(63, 153, 127, 0.5)), url("../img/hero-login.jpg");*/
+	/*background: linear-gradient(-135deg, rgba(37, 57, 189, 0.9), rgba(63, 153, 127, 0.5)), url("../img/hero-login.jpg");*/
+	background: linear-gradient(-90deg, rgba(0,0,0, 0.5), rgba(0,0,0, 0.5)), url("../img/hero-login.jpg");
+	/*background: url("../img/hero-login.jpg");*/
+	background-repeat: no-repeat !important;
+	background-position: center !important;
+	background-size: cover !important
+}
+
+.login #login {
+	width: 90%;
+	max-width: 280px;
+	max-width: 28rem;
+	border: 1px solid #efefef;
+	padding: 0;
+	background-color: #fff;
+	background: #fff;
+	box-shadow: 0 0 4px 0px rgba(0, 0, 0, 0.2);
+	border-radius: 4px;
+	margin-top: 8%
+}
+
+.login h1 {
+	padding: 0 20px;
+}
+
+.login h1 a {
+	background-image: url("../img/dcv3-logo.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 100%;
+	margin: 30px auto 0;
+	padding: 0;
+	color: #999;
+	line-height: 1.3em;
+	text-indent: -9999px;
+	text-decoration: none;
+	font-weight: normal;
+	overflow: hidden;
+	outline: none;
+	border-radius: 0;
+	display: block;
+	width: 100%;
+	/*height: 120px;*/
+	max-width: 410px;
+}
+
+/*@media (min-width: 640px) {
+	.login h1 a {
+		height: 140px;
+	}
+}
+
+@media (min-width: 800px) {
+	.login h1 a {
+		height: 160px;
+	}
+}*/
+
+.login form {
+	padding: 20px;
+	border-radius: 0;
+	box-shadow: none;
+	border: none;
+}
+
+.login form #user_login,
+.login form #user_pass {
+	width: 100%;
+	height: 40px;
+	padding: 6px 12px;
+	border: 1px solid #ced2d9;
+	border-radius: 0;
+	margin: 5px 0 20px;
+	box-shadow: none;
+	background-color: #fff;
+	color: #404040;
+	font-size: 12px;
+	font-size: 1.2rem
+}
+
+.login form #user_login:focus,
+.login form #user_pass:focus {
+	border-color: #000;
+	box-shadow: none;
+	outline: 0
+}
+
+.login form .forgetmenot {
+	line-height: 40px
+}
+
+.login form .forgetmenot label {
+	font-size: 8px;
+	font-size: .8rem
+}
+
+.login #wp-submit {
+	text-shadow: none;
+	box-shadow: none;
+	color: #fff;
+	background: #000;
+	border-color: #000;
+	border-radius: 0;
+	line-height: 40px;
+	height: 40px;
+	padding: 0 20px;
+	letter-spacing: .1rem;
+	font-weight: 300;
+	-webkit-transition: .3s;
+	transition: .3s;
+	text-transform: uppercase;
+}
+
+.login #wp-submit:focus,
+.login #wp-submit:hover {
+	color: #fff;
+	background: #333;
+	border-color: #333;
+}
+
+.login #nav,
+.login #backtoblog {
+	font-size: 9px;
+	font-size: .9rem
+}
+
+.login #nav a,
+.login #backtoblog a {
+	text-decoration: none;
+	-webkit-transition: .3s;
+	transition: .3s;
+	color: #000
+}
+
+.login #nav a:hover,
+.login #backtoblog a:hover {
+	color: #307561
+}
+
+@-webkit-keyframes autofill {
+	to {
+		color: #404040;
+		background: transparent
+	}
+}
+
+input:-webkit-autofill {
+	-webkit-animation-name: autofill;
+	-webkit-animation-fill-mode: both
+}
