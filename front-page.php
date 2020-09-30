@@ -76,15 +76,28 @@ get_header();
 
     <div class=home-banner data-flickity='{ "wrapAround": true }'>
 
+
+    <?php /*
+
+        <section class="special-feature" <?php if(get_field('carousel_image_1')) { echo 'style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(' . get_field('carousel_image_1') . ');"'; }?>>
+      */ ?>
+
+
       <div class=home-banner-cell>
-        <section class="special-feature">
+        <section class="special-feature" <?php if(get_field('carousel_image_1')) { echo 'style="background: url(' . get_field('carousel_image_1') . ');"'; }?>>
           <div class="container-fluid">
             <div class="row">
               <div class="col-md-6 offset-md-6 p-0">
                 <div class="featured-block">
-                  <h3>Section Title</h3>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed optio est nisi assumenda voluptas eveniet vitae quam quos minus quidem voluptatem, amet, voluptate alias sequi ab totam non beatae minima.</p>
-                  <a class="btn btn-secondary" href="#">Learn more</a>
+
+                  <?php if(get_field('carousel_heading_1'))
+                    { echo '<h3>' . get_field('carousel_heading_1') . '</h3>'; } ?>
+
+                  <?php if(get_field('carousel_copy_1'))
+                    { echo '<p>' . get_field('carousel_copy_1') . '</p>'; } ?>
+
+                  <?php if(get_field('carousel_button_url_1') && get_field('carousel_button_text_1'))
+                    { echo '<a class="btn btn-secondary" href="' . get_field('carousel_button_url_1') . '">' . get_field('carousel_button_text_1') . '</a>'; } ?>
                 </div>
               </div>
             </div>
@@ -93,14 +106,20 @@ get_header();
       </div>
 
       <div class=home-banner-cell>
-        <section class="special-feature">
+        <section class="special-feature" <?php if(get_field('carousel_image_2')) { echo 'style="background: url(' . get_field('carousel_image_2') . ');"'; }?>>
           <div class="container-fluid">
             <div class="row">
               <div class="col-md-6 offset-md-6 p-0">
                 <div class="featured-block">
-                  <h3>Section Title</h3>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed optio est nisi assumenda voluptas eveniet vitae quam quos minus quidem voluptatem, amet, voluptate alias sequi ab totam non beatae minima.</p>
-                  <a class="btn btn-secondary" href="#">Learn more</a>
+
+                  <?php if(get_field('carousel_heading_2'))
+                    { echo '<h3>' . get_field('carousel_heading_2') . '</h3>'; } ?>
+
+                  <?php if(get_field('carousel_copy_2'))
+                    { echo '<p>' . get_field('carousel_copy_2') . '</p>'; } ?>
+
+                  <?php if(get_field('carousel_button_url_2') && get_field('carousel_button_text_2'))
+                    { echo '<a class="btn btn-secondary" href="' . get_field('carousel_button_url_2') . '">' . get_field('carousel_button_text_2') . '</a>'; } ?>
                 </div>
               </div>
             </div>
@@ -109,14 +128,20 @@ get_header();
       </div>
 
       <div class=home-banner-cell>
-        <section class="special-feature">
+        <section class="special-feature" <?php if(get_field('carousel_image_3')) { echo 'style="background: url(' . get_field('carousel_image_3') . ');"'; }?>>
           <div class="container-fluid">
             <div class="row">
               <div class="col-md-6 offset-md-6 p-0">
                 <div class="featured-block">
-                  <h3>Section Title</h3>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed optio est nisi assumenda voluptas eveniet vitae quam quos minus quidem voluptatem, amet, voluptate alias sequi ab totam non beatae minima.</p>
-                  <a class="btn btn-secondary" href="#">Learn more</a>
+
+                  <?php if(get_field('carousel_heading_3'))
+                    { echo '<h3>' . get_field('carousel_heading_3') . '</h3>'; } ?>
+
+                  <?php if(get_field('carousel_copy_3'))
+                    { echo '<p>' . get_field('carousel_copy_3') . '</p>'; } ?>
+
+                  <?php if(get_field('carousel_button_url_3') && get_field('carousel_button_text_3'))
+                    { echo '<a class="btn btn-secondary" href="' . get_field('carousel_button_url_3') . '">' . get_field('carousel_button_text_3') . '</a>'; } ?>
                 </div>
               </div>
             </div>
