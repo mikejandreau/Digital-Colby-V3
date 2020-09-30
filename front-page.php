@@ -69,28 +69,62 @@ get_header();
 
 
 
-  <section class="special-feature">
 
-    <div class="container-fluid">
-      <div class="row">
 
-        <div class="col-md-6 offset-md-6 p-0">
-          <div class="featured-block">
-            <h3>Section Title</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed optio est nisi assumenda voluptas eveniet vitae quam quos minus quidem voluptatem, amet, voluptate alias sequi ab totam non beatae minima.</p>
-            <a class="btn btn-secondary" href="#">Learn more</a>
+
+
+
+    <div class=home-banner data-flickity='{ "wrapAround": true }'>
+
+      <div class=home-banner-cell>
+        <section class="special-feature">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-6 offset-md-6 p-0">
+                <div class="featured-block">
+                  <h3>Section Title</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed optio est nisi assumenda voluptas eveniet vitae quam quos minus quidem voluptatem, amet, voluptate alias sequi ab totam non beatae minima.</p>
+                  <a class="btn btn-secondary" href="#">Learn more</a>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
+        </section>
       </div>
+
+      <div class=home-banner-cell>
+        <section class="special-feature">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-6 offset-md-6 p-0">
+                <div class="featured-block">
+                  <h3>Section Title</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed optio est nisi assumenda voluptas eveniet vitae quam quos minus quidem voluptatem, amet, voluptate alias sequi ab totam non beatae minima.</p>
+                  <a class="btn btn-secondary" href="#">Learn more</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class=home-banner-cell>
+        <section class="special-feature">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-6 offset-md-6 p-0">
+                <div class="featured-block">
+                  <h3>Section Title</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed optio est nisi assumenda voluptas eveniet vitae quam quos minus quidem voluptatem, amet, voluptate alias sequi ab totam non beatae minima.</p>
+                  <a class="btn btn-secondary" href="#">Learn more</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
     </div>
-  </section>
-
-
-
-
-
-
-
 
 
 
