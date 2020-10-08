@@ -100,15 +100,25 @@
 
 
 
-<header class="masthead">
+<header class="masthead" <?php if(get_field('homepage_banner_image')) { echo 'style="background: url(' . get_field('homepage_banner_image') . ');"'; }?>>
   <div class="container h-100">
     <div class="row h-100">
       <div class="col-sm-12 align-self-center">
 
 <?php if ( is_front_page() ) : ?>
+  
+          <?php if(get_field('homepage_banner_title'))
+            { echo '<h1 class="font-weight-light">' . get_field('homepage_banner_title') . '</h1>'; } ?>
 
-          <h1 class="font-weight-light">Home Page Stuff</h1>
-          <p class="lead">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+          <div class="lead">
+            <?php
+            while ( have_posts() ) :
+              the_post();
+              get_template_part( 'template-parts/content', 'page' );
+            endwhile; 
+            ?>
+          </div>
+
           <form role="search" method="get" class="form search-form" action="/index.php">
             <div class="input-group">
               <input name="s" type="text" class="form-control" placeholder="Search this site">

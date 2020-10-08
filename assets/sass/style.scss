@@ -316,11 +316,10 @@ body {
   height: 20vh;
   min-height: 200px;
   background-image: url('https://source.unsplash.com/WLUHO9A_xik/1920x1080');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   margin-bottom: 2rem;
   color: #fff;
+
+  @include bgImage;
 
   @include tablet {
     margin-bottom: 4rem;
