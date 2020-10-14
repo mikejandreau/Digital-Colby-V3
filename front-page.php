@@ -18,7 +18,7 @@ get_header();
 	<main id="primary" class="site-main">
 
 
-    <section class="featured-section">
+    <section class="featured-section triple-feature">
       <div class="container">
         <div class="row">
 

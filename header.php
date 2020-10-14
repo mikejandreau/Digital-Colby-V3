@@ -83,118 +83,97 @@
 
 <div class="site-content">
 
+  <header class="masthead" <?php if(get_field('homepage_banner_image')) { echo 'style="background: url(' . get_field('homepage_banner_image') . ');"'; }?>>
+    <div class="container h-100">
+      <div class="row h-100">
+        <div class="col-sm-12 align-self-center">
 
+          <?php if ( is_front_page() ) : ?>
 
+                <?php if(get_field('homepage_banner_title'))
+                  { echo '<h1 class="font-weight-light">' . get_field('homepage_banner_title') . '</h1>'; } ?>
 
+                <div class="lead">
+                  <?php
+                  while ( have_posts() ) :
+                    the_post();
+                    get_template_part( 'template-parts/content', 'page' );
+                  endwhile; 
+                  ?>
+                </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-<header class="masthead" <?php if(get_field('homepage_banner_image')) { echo 'style="background: url(' . get_field('homepage_banner_image') . ');"'; }?>>
-  <div class="container h-100">
-    <div class="row h-100">
-      <div class="col-sm-12 align-self-center">
-
-<?php if ( is_front_page() ) : ?>
-  
-          <?php if(get_field('homepage_banner_title'))
-            { echo '<h1 class="font-weight-light">' . get_field('homepage_banner_title') . '</h1>'; } ?>
-
-          <div class="lead">
-            <?php
-            while ( have_posts() ) :
-              the_post();
-              get_template_part( 'template-parts/content', 'page' );
-            endwhile; 
-            ?>
-          </div>
-
-          <form role="search" method="get" class="form search-form" action="/index.php">
-            <div class="input-group">
-              <input name="s" type="text" class="form-control" placeholder="Search this site">
-              <span class="input-group-btn">
-                <button type="submit" value="Search" class="btn btn-primary" type="button"><i class="fa fa-search" aria-hidden="true"></i>&nbsp;</button>
-              </span>
-            </div>
-          </form>
-
-<?php else : ?>
-
-<!-- 
-          <h1 class="font-weight-light">Vertically Centered Masthead Content</h1>
-          <p class="lead">A great starter layout for a landing page</p>
- -->
-
-          <?php if ( is_single() ) : ?>
-            <?php the_title( '<h1 class="entry-title"><span class="sr-only">Article Title: </span>', '</h1>' ); ?>
-            <div class="blog-author-date">
-              <span class="blog-date">Posted on <?php echo get_the_date('M j, Y'); ?></span>
-              <?php 
-                $temp_post = get_post($post_id);
-                $user_id = $temp_post->post_author;
-                $user_url = get_author_posts_url($user_id);
-                $first_name = get_the_author_meta('first_name',$user_id);
-                $last_name = get_the_author_meta('last_name',$user_id);
-                $full_name = "{$first_name} {$last_name}";
-                echo '<span class="blog-author">by <a href="' . $user_url . '">' . $full_name . '</a></span>';
-              ?>
-            </div>
-
-          <?php elseif ( is_author() ) : ?>
-            <?php
-              $temp_post = get_post($post_id);
-              $user_id = $temp_post->post_author;
-              $first_name = get_the_author_meta('first_name',$user_id);
-              $last_name = get_the_author_meta('last_name',$user_id);
-              $full_name = "{$first_name} {$last_name}";
-              echo '<h1 class="entry-title">Posts by ' . $full_name . ' </h1>';
-            ?>
-
-          <?php elseif ( is_category() ) : ?>
-            <?php single_cat_title( '<h1 class="entry-title">Category: ', '</h1>' ); ?>
-
-          <?php elseif ( is_tag() ) : ?>
-            <?php single_tag_title( '<h1 class="entry-title">Tag: ', '</h1>' ); ?>
-
-          <?php elseif ( is_month() ) : ?>
-            <?php the_archive_title( '<h1 class="entry-title">', '</h1>' ); ?>
-
-          <?php elseif ( is_post_type_archive() ) : ?>
-            <?php post_type_archive_title( '<h1 class="entry-title">Archives: ', '</h1>' ); ?>
-
-          <?php elseif ( is_search() ) : ?>
-            <?php echo '<h1 class="entry-title">Search Results for: ' . get_search_query() .  '</h1>'; ?>
-
-          <?php elseif ( is_home() ) : ?>
-            <h1>Blog</h1>
-
-          <?php elseif ( is_404() ) : ?>
-            <h1>Oops! That page can&rsquo;t be found.</h1>
-
-          <?php elseif ( is_page_template( 'contact.php' ) ) : ?>
-            <h1>Get in Touch</h1>
+                <?php /*
+                <form role="search" method="get" class="form search-form" action="/index.php">
+                  <div class="input-group">
+                    <input name="s" type="text" class="form-control" placeholder="Search this site">
+                    <span class="input-group-btn">
+                      <button type="submit" value="Search" class="btn btn-primary" type="button"><i class="fa fa-search" aria-hidden="true"></i>&nbsp;</button>
+                    </span>
+                  </div>
+                </form>
+                */ ?>
 
           <?php else : ?>
-            <?php the_title( '<h1 class="entry-title"><span class="sr-only">Article Title: </span>', '</h1>' ); ?>
+
+                <?php if ( is_single() ) : ?>
+                  <?php the_title( '<h1 class="entry-title"><span class="sr-only">Article Title: </span>', '</h1>' ); ?>
+                  <div class="blog-author-date">
+                    <span class="blog-date">Posted on <?php echo get_the_date('M j, Y'); ?></span>
+                    <?php 
+                      $temp_post = get_post($post_id);
+                      $user_id = $temp_post->post_author;
+                      $user_url = get_author_posts_url($user_id);
+                      $first_name = get_the_author_meta('first_name',$user_id);
+                      $last_name = get_the_author_meta('last_name',$user_id);
+                      $full_name = "{$first_name} {$last_name}";
+                      echo '<span class="blog-author">by <a href="' . $user_url . '">' . $full_name . '</a></span>';
+                    ?>
+                  </div>
+
+                <?php elseif ( is_author() ) : ?>
+                  <?php
+                    $temp_post = get_post($post_id);
+                    $user_id = $temp_post->post_author;
+                    $first_name = get_the_author_meta('first_name',$user_id);
+                    $last_name = get_the_author_meta('last_name',$user_id);
+                    $full_name = "{$first_name} {$last_name}";
+                    echo '<h1 class="entry-title">Posts by ' . $full_name . ' </h1>';
+                  ?>
+
+                <?php elseif ( is_category() ) : ?>
+                  <?php single_cat_title( '<h1 class="entry-title">Category: ', '</h1>' ); ?>
+
+                <?php elseif ( is_tag() ) : ?>
+                  <?php single_tag_title( '<h1 class="entry-title">Tag: ', '</h1>' ); ?>
+
+                <?php elseif ( is_month() ) : ?>
+                  <?php the_archive_title( '<h1 class="entry-title">', '</h1>' ); ?>
+
+                <?php elseif ( is_post_type_archive() ) : ?>
+                  <?php post_type_archive_title( '<h1 class="entry-title">Archives: ', '</h1>' ); ?>
+
+                <?php elseif ( is_search() ) : ?>
+                  <?php echo '<h1 class="entry-title">Search Results for: ' . get_search_query() .  '</h1>'; ?>
+
+                <?php elseif ( is_home() ) : ?>
+                  <h1>Archives</h1>
+
+                <?php elseif ( is_404() ) : ?>
+                  <h1>Oops! That page can&rsquo;t be found.</h1>
+
+                <?php elseif ( is_page_template( 'contact.php' ) ) : ?>
+                  <h1>Get in Touch</h1>
+
+                <?php else : ?>
+                  <?php the_title( '<h1 class="entry-title"><span class="sr-only">Article Title: </span>', '</h1>' ); ?>
+
+                <?php endif; ?>
 
           <?php endif; ?>
 
-
-<?php endif; ?>
-
+        </div>
       </div>
     </div>
-  </div>
-</header>
+  </header>
 
 
