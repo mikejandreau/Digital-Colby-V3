@@ -95,7 +95,51 @@
 
 <div class="site-content">
   
-  <header class="masthead" <?php if(get_field('homepage_banner_image')) { echo 'style="background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)),url(' . get_field('homepage_banner_image') . ');"'; }?>>
+  <header class="masthead" 
+
+
+
+
+
+
+                <?php if ( is_front_page() ) : ?>
+
+
+
+  <?php if(get_field('homepage_banner_image')) { echo 'style="background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)),url(' . get_field('homepage_banner_image') . ');"'; } ?>
+
+                <?php elseif ( has_post_thumbnail() ): ?>
+
+
+<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full'); ?>
+<?php echo 'style="background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)),url(' . $image[0] . ');"'; ?>
+
+
+
+
+
+                <?php else : ?>
+
+                <?php endif; ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  >
+
+
+
     <div class="container h-100">
       <div class="row h-100">
         <div class="col-sm-12 align-self-center">
