@@ -18,69 +18,69 @@
  * 1. DEFINITIONS
  * Section information.
  */
-$mjcv2_sections = [
-    'section-theme-settings' => [
-        'title' => 'Theme Settings',
-        'desc'  => 'General theme settings.'
-    ],
-    'section-social-settings' => [
-        'title' => 'Social Settings',
-        'desc'  => 'Add the full URLs of your social media profiles to show them in the footer. Only the text fields with links will show up on the front end - blank fields won\'t be displayed.'
-    ],
-    'section-footer-tagline' => [
-        'title' => 'Footer Tagline',
-        'desc'  => 'This is the text that appears below the copyright info in the footer.'
+$dcv3_sections = [
+    // 'section-theme-settings' => [
+    //     'title' => 'Theme Settings',
+    //     'desc'  => 'General theme settings.'
+    // ],
+    // 'section-social-settings' => [
+    //     'title' => 'Social Settings',
+    //     'desc'  => 'Add the full URLs of your social media profiles to show them in the footer. Only the text fields with links will show up on the front end - blank fields won\'t be displayed.'
+    // ],
+    'section-header-alert' => [
+        'title' => 'Header Alert',
+        'desc'  => 'This is the text that will appear in the alert at the top of the homepage. To hide the alert, leave is field blank.'
     ]
 ];
 
 /*
  * Field information.
  */
-$mjcv2_fields = [
-    'mjcv2-logo' => [
-        'title'    => 'Header Logo',
-        'type'     => 'upload',
-        'section'  => 'section-theme-settings',
-        'default'  => '',
-        'desc'     => 'Set your default logo. Upload or choose an existing one.',
-        'sanitize' => ''
-    ],
-    'mjcv2-social-facebook' => [
-        'title'    => 'Facebook Profile',
-        'type'     => 'text',
-        'section'  => 'section-social-settings',
-        'default'  => '',
-        'desc'     => '',
-        'sanitize' => 'full'
-    ],
-    'mjcv2-social-twitter' => [
-        'title'    => 'Twitter Profile',
-        'type'     => 'text',
-        'section'  => 'section-social-settings',
-        'default'  => '',
-        'desc'     => '',
-        'sanitize' => 'full'
-    ],
-    'mjcv2-social-instagram' => [
-        'title'    => 'Instagram Profile',
-        'type'     => 'text',
-        'section'  => 'section-social-settings',
-        'default'  => '',
-        'desc'     => '',
-        'sanitize' => 'full'
-    ],
-    'mjcv2-social-linkedin' => [
-        'title'    => 'LinkedIn Profile',
-        'type'     => 'text',
-        'section'  => 'section-social-settings',
-        'default'  => '',
-        'desc'     => '',
-        'sanitize' => 'full'
-    ],
-    'mjcv2-footer-tagline' => [
-        'title'    => 'Tagline Text',
+$dcv3_fields = [
+    // 'dcv3-logo' => [
+    //     'title'    => 'Header Logo',
+    //     'type'     => 'upload',
+    //     'section'  => 'section-theme-settings',
+    //     'default'  => '',
+    //     'desc'     => 'Set your default logo. Upload or choose an existing one.',
+    //     'sanitize' => ''
+    // ],
+    // 'dcv3-social-facebook' => [
+    //     'title'    => 'Facebook Profile',
+    //     'type'     => 'text',
+    //     'section'  => 'section-social-settings',
+    //     'default'  => '',
+    //     'desc'     => '',
+    //     'sanitize' => 'full'
+    // ],
+    // 'dcv3-social-twitter' => [
+    //     'title'    => 'Twitter Profile',
+    //     'type'     => 'text',
+    //     'section'  => 'section-social-settings',
+    //     'default'  => '',
+    //     'desc'     => '',
+    //     'sanitize' => 'full'
+    // ],
+    // 'dcv3-social-instagram' => [
+    //     'title'    => 'Instagram Profile',
+    //     'type'     => 'text',
+    //     'section'  => 'section-social-settings',
+    //     'default'  => '',
+    //     'desc'     => '',
+    //     'sanitize' => 'full'
+    // ],
+    // 'dcv3-social-linkedin' => [
+    //     'title'    => 'LinkedIn Profile',
+    //     'type'     => 'text',
+    //     'section'  => 'section-social-settings',
+    //     'default'  => '',
+    //     'desc'     => '',
+    //     'sanitize' => 'full'
+    // ],
+    'dcv3-header-alert' => [
+        'title'    => 'Alert Text',
         'type'     => 'textarea',
-        'section'  => 'section-footer-tagline',
+        'section'  => 'section-header-alert',
         'default'  => '',
         'desc'     => '',
         'sanitize' => ''
@@ -92,10 +92,10 @@ $mjcv2_fields = [
 /*
  * 2. HOOKS
  */
-add_action( 'after_setup_theme', 'mjcv2_init_option' );
-add_action( 'admin_menu', 'mjcv2_update_menu' );
-add_action( 'admin_init', 'mjcv2_init_settings' );
-add_action( 'admin_enqueue_scripts', 'mjcv2_options_custom_scripts' );
+add_action( 'after_setup_theme', 'dcv3_init_option' );
+add_action( 'admin_menu', 'dcv3_update_menu' );
+add_action( 'admin_init', 'dcv3_init_settings' );
+add_action( 'admin_enqueue_scripts', 'dcv3_options_custom_scripts' );
 
 
 
@@ -103,71 +103,71 @@ add_action( 'admin_enqueue_scripts', 'mjcv2_options_custom_scripts' );
  * 3. RENDER FUNCTIONS
  * Renders a section description.
  */
-function mjcv2_render_section( $args ) {
-    global $mjcv2_sections;
+function dcv3_render_section( $args ) {
+    global $dcv3_sections;
 
-    echo "<p>" . $mjcv2_sections[ $args['id'] ]['desc'] . "</p>";
+    echo "<p>" . $dcv3_sections[ $args['id'] ]['desc'] . "</p>";
     echo "<hr />";
 }
 
 /*
  * Renders input fields: can be text, textarea, checkbox, radio, select, or upload
  */
-function mjcv2_render_field( $id ) {
-    global $mjcv2_fields;
+function dcv3_render_field( $id ) {
+    global $dcv3_fields;
 
-    $options = get_option( 'mjcv2_options' );
+    $options = get_option( 'dcv3_options' );
 
     // If options are not set yet for that ID, grab the default value.
-    $field_value = isset( $options[ $id ] ) ? $options[ $id ] : mjcv2_get_field_default( $id );
+    $field_value = isset( $options[ $id ] ) ? $options[ $id ] : dcv3_get_field_default( $id );
 
     // Generate HTML markup based on field type.
-    switch ( $mjcv2_fields[ $id ]['type'] ) {
+    switch ( $dcv3_fields[ $id ]['type'] ) {
         case 'text': 
-            echo "<input type='text' name='mjcv2_options[" . $id . "]' value='" . $field_value . "' />";
-            echo "<p class='description'>" . $mjcv2_fields[ $id ]['desc'] . "</p>";
+            echo "<input type='text' name='dcv3_options[" . $id . "]' value='" . $field_value . "' />";
+            echo "<p class='description'>" . $dcv3_fields[ $id ]['desc'] . "</p>";
             
             break;
 
         case 'upload':
             $visibility_class = ( '' != $field_value ) ? "" : "hide";
 
-            echo "<img src='" . $field_value . "' alt='Logo' class='mjcv2-custom-thumbnail " . $visibility_class . "' id='" . $id . "-thumbnail' />";
-            echo "<input type='hidden' name='mjcv2_options[" . $id . "]' id='" . $id . "-upload-field' value='" . $field_value . "' />";
+            echo "<img src='" . $field_value . "' alt='Logo' class='dcv3-custom-thumbnail " . $visibility_class . "' id='" . $id . "-thumbnail' />";
+            echo "<input type='hidden' name='dcv3_options[" . $id . "]' id='" . $id . "-upload-field' value='" . $field_value . "' />";
             echo "<input type='button' class='btn-upload-img button' value='Upload logo' data-field-id='" . $id . "' />";
             echo "<input type='button' class='btn-remove-img button " . $visibility_class . "' value='Remove logo' data-field-id='" . $id . "' id='" . $id . "-remove-button' />";
-            echo "<p class='description'>" . $mjcv2_fields[ $id ]['desc'] . "</p>";
+            echo "<p class='description'>" . $dcv3_fields[ $id ]['desc'] . "</p>";
             
             break;
 
         case 'textarea': 
-            echo "<textarea name='mjcv2_options[" . $id . "]' cols='40' rows='10'>" . $field_value . "</textarea>";
-            echo "<p class='description'>" . $mjcv2_fields[ $id ]['desc'] . "</p>";
+            echo "<textarea name='dcv3_options[" . $id . "]' cols='40' rows='10'>" . $field_value . "</textarea>";
+            echo "<p class='description'>" . $dcv3_fields[ $id ]['desc'] . "</p>";
             
             break;
 
         case 'checkbox':
-            echo "<input type='checkbox' name='mjcv2_options[" . $id . "]' id='" . $id . "' value='1' " . checked( $field_value, 1, false ) . " />";
-            echo "<label for='" . $id . "'>" . $mjcv2_fields[ $id ]['label'] . "</label>";
+            echo "<input type='checkbox' name='dcv3_options[" . $id . "]' id='" . $id . "' value='1' " . checked( $field_value, 1, false ) . " />";
+            echo "<label for='" . $id . "'>" . $dcv3_fields[ $id ]['label'] . "</label>";
 
             break;
 
         case 'radio': 
             // Generate as many radio buttons as there are children.
-            for ( $i = 0; $i < sizeof( $mjcv2_fields[ $id ]['children'] ); $i++ ) {
+            for ( $i = 0; $i < sizeof( $dcv3_fields[ $id ]['children'] ); $i++ ) {
                 echo "<p>";
-                echo "<input type='radio' name='mjcv2_options[" . $id . "]' id='mjcv2_options[" . $id . "]-" . $i . "' value='" . $i . "' " . checked( $field_value, $i, false ) . " />";
-                echo "<label for='mjcv2_options[" . $id . "]-" . $i . "'>" . $mjcv2_fields[ $id ]['children'][ $i ] . "</label>";
+                echo "<input type='radio' name='dcv3_options[" . $id . "]' id='dcv3_options[" . $id . "]-" . $i . "' value='" . $i . "' " . checked( $field_value, $i, false ) . " />";
+                echo "<label for='dcv3_options[" . $id . "]-" . $i . "'>" . $dcv3_fields[ $id ]['children'][ $i ] . "</label>";
                 echo "</p>";
             }
 
             break;
 
         case 'select': 
-            echo "<select name='mjcv2_options[" . $id . "]'>";
-            for ( $i = 0; $i < sizeof( $mjcv2_fields[ $id ]['children'] ); $i++ ) {
+            echo "<select name='dcv3_options[" . $id . "]'>";
+            for ( $i = 0; $i < sizeof( $dcv3_fields[ $id ]['children'] ); $i++ ) {
                 echo "<option value='" . $i . "' " . selected( $field_value, $i, false ) . ">";
-                echo $mjcv2_fields[ $id ]['children'][ $i ];
+                echo $dcv3_fields[ $id ]['children'][ $i ];
                 echo "</option>";
             }
             echo "</select>";
@@ -179,7 +179,7 @@ function mjcv2_render_field( $id ) {
 /*
  * Renders the theme options page.
  */
-function mjcv2_render_theme_options() {
+function dcv3_render_theme_options() {
     if ( ! current_user_can( 'manage_options' ) ) {
         wp_die( 'You do not have sufficient permissions to access this page.' );
     } ?>
@@ -191,8 +191,8 @@ function mjcv2_render_theme_options() {
 
         <form action="options.php" method="post">
             <?php
-                settings_fields( "mjcv2_options" );
-                do_settings_sections( "mjcv2-theme-options" );
+                settings_fields( "dcv3_options" );
+                do_settings_sections( "dcv3-theme-options" );
                 echo "<hr />";
                 submit_button();
             ?>
@@ -206,14 +206,14 @@ function mjcv2_render_theme_options() {
  * 4. SANITIZE FUNCTIONS
  * Sanitizes the settings.
  */
-function mjcv2_options_validate( $input ) {
+function dcv3_options_validate( $input ) {
     // Define a blank array for the output.
     $output = [];
 
     // Do a general sanitization for every field.
     foreach ( $input as $key => $value ) {
         // Grab the sanitize option for this field.
-        $field_sanitize = mjcv2_get_field_sanitize( $key );
+        $field_sanitize = dcv3_get_field_sanitize( $key );
 
         switch ( $field_sanitize ) {
             case 'default':
@@ -243,26 +243,26 @@ function mjcv2_options_validate( $input ) {
  * 5. CUSTOM SCRIPTS
  * Registers and loads custom JavaScript and CSS.
  */
-function mjcv2_options_custom_scripts() {
+function dcv3_options_custom_scripts() {
     // Get information about the current page.
     $screen = get_current_screen();
 
     // Register a custom script that depends on jQuery, Media Upload and Thickbox (available from the Core).
-    wp_register_script( 'mjcv2-custom-admin-scripts', get_template_directory_uri() .'/inc/theme-options/theme-options.js', array( 'jquery' ) );
+    wp_register_script( 'dcv3-custom-admin-scripts', get_template_directory_uri() .'/inc/theme-options/theme-options.js', array( 'jquery' ) );
 
     // Register custom styles.
-    wp_register_style( 'mjcv2-custom-admin-styles', get_template_directory_uri() .'/inc/theme-options/theme-options.css' );
+    wp_register_style( 'dcv3-custom-admin-styles', get_template_directory_uri() .'/inc/theme-options/theme-options.css' );
     
     // Only load these scripts if we're on the theme options page.
-    if ( 'appearance_page_mjcv2-theme-options' == $screen->id ) {
+    if ( 'appearance_page_dcv3-theme-options' == $screen->id ) {
         // Enqueues all scripts, styles, settings, and templates necessary to use all media JavaScript APIs.
         wp_enqueue_media();
         
         // Load our custom scripts.
-        wp_enqueue_script( 'mjcv2-custom-admin-scripts' );
+        wp_enqueue_script( 'dcv3-custom-admin-scripts' );
 
         // Load our custom styles.
-        wp_enqueue_style( 'mjcv2-custom-admin-styles' );
+        wp_enqueue_style( 'dcv3-custom-admin-styles' );
     }    
 }
 
@@ -272,57 +272,57 @@ function mjcv2_options_custom_scripts() {
  * 6. OTHER FUNCTIONS
  * Returns the default value of a field.
  */
-function mjcv2_get_field_default( $id ) {
-    global $mjcv2_fields;
+function dcv3_get_field_default( $id ) {
+    global $dcv3_fields;
 
-    return $mjcv2_fields[ $id ]['default'];
+    return $dcv3_fields[ $id ]['default'];
 }
 
 /*
  * Checks if the options exists in the database.
  */
-function mjcv2_init_option() {
-    $options = get_option( 'mjcv2_options' );
+function dcv3_init_option() {
+    $options = get_option( 'dcv3_options' );
 
     if ( false === $options ) {
-        add_option( 'mjcv2_options' );
+        add_option( 'dcv3_options' );
     }
 }
 
 /*
  * Creates a sub-menu under Appearance.
  */
-function mjcv2_update_menu() {
-    add_theme_page( 'Theme Options', 'Theme Options', 'manage_options', 'mjcv2-theme-options', 'mjcv2_render_theme_options' );
+function dcv3_update_menu() {
+    add_theme_page( 'Theme Options', 'Theme Options', 'manage_options', 'dcv3-theme-options', 'dcv3_render_theme_options' );
 }
 
 /*
  * Registers and adds settings, sections and fields.
  */
-function mjcv2_init_settings() {
-    // Declare $mjcv2_sections and $mjcv2_fields as global.
-    global $mjcv2_fields, $mjcv2_sections;
+function dcv3_init_settings() {
+    // Declare $dcv3_sections and $dcv3_fields as global.
+    global $dcv3_fields, $dcv3_sections;
 
     // Register a general setting.
     // The $option_group is the same as $option_name to prevent the "Error: options page not found." problem.
-    register_setting( "mjcv2_options", "mjcv2_options", "mjcv2_options_validate" );
+    register_setting( "dcv3_options", "dcv3_options", "dcv3_options_validate" );
 
-    // Add sections as defined in the $mjcv2_sections array.
-    foreach ($mjcv2_sections as $section_id => $section_value) {
-        add_settings_section( $section_id, $section_value['title'], "mjcv2_render_section", "mjcv2-theme-options" );
+    // Add sections as defined in the $dcv3_sections array.
+    foreach ($dcv3_sections as $section_id => $section_value) {
+        add_settings_section( $section_id, $section_value['title'], "dcv3_render_section", "dcv3-theme-options" );
     }
 
-    // Add fields as defined in the $mjcv2_fields array.
-    foreach ($mjcv2_fields as $field_id => $field_value) {
-        add_settings_field( $field_id, $field_value['title'], "mjcv2_render_field", "mjcv2-theme-options", $field_value['section'], $field_id );
+    // Add fields as defined in the $dcv3_fields array.
+    foreach ($dcv3_fields as $field_id => $field_value) {
+        add_settings_field( $field_id, $field_value['title'], "dcv3_render_field", "dcv3-theme-options", $field_value['section'], $field_id );
     }
 }
 
 /*
  * Returns the sanitized field value.
  */
-function mjcv2_get_field_sanitize( $id ) {
-    global $mjcv2_fields;
+function dcv3_get_field_sanitize( $id ) {
+    global $dcv3_fields;
 
-    return $mjcv2_fields[ $id ]['sanitize'];
+    return $dcv3_fields[ $id ]['sanitize'];
 }

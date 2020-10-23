@@ -200,7 +200,9 @@ $menu_toggle_pad: 5px;   // left/right padding between button area and bars.
 $menu_toggle_bar_space: 5px;              // spacing between button bars
 $menu_toggle_color: $color_darkgray;
 
-
+$font__headings: "Oswald", "Roboto Condensed", Impact, "Franklin Gothic Bold", sans-serif;
+$font__main: "Open Sans", "Segoe UI", Tahoma, Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+// 
 
 
 
@@ -275,6 +277,33 @@ $menu_toggle_color: $color_darkgray;
 
 
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  clear: both;
+  font-family: $font__headings;
+  font-weight: 600;
+}
+
+h1,
+h2 {
+  letter-spacing: -1px;
+}
+
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+  font-family: $font__main;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
 /* template */
 // body,html {
 //   height: 100%;
@@ -284,6 +313,10 @@ $menu_toggle_color: $color_darkgray;
 // body padding for fixed navbar 
 body {
     padding-top: 90px;
+
+    @include laptop {
+      padding-top: 100px;
+    }
 }
 
 // /* hidden spacer before sections for proper offset */
@@ -315,22 +348,40 @@ body {
 // }
 
 .masthead {
-  height: 20vh;
-  min-height: 200px;
-  background-image: url('https://source.unsplash.com/WLUHO9A_xik/1920x1080');
+  // height: 25vh;
+  // min-height: 200px;
+  // background-image: url('https://source.unsplash.com/WLUHO9A_xik/1920x1080');
+  background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)),url('https://source.unsplash.com/WLUHO9A_xik/1920x1080');
   margin-bottom: 2rem;
   color: #fff;
+  padding: 5rem 0;
 
   @include bgImage;
 
   @include tablet {
     margin-bottom: 4rem;
+    padding: 8rem 0;
   }
 
   h1 {
     font-size: 3rem;
-    margin-top: 0.5rem;
+    margin-top: 1rem;
     color: #fff;
+    line-height: 1;
+  }
+
+  h2 {
+    font-size: 2rem;
+    color: #fff;
+  }
+
+  h3 {
+    font-size: 1.75rem;
+    color: #fff;
+  }
+
+  p {
+    font-size: 1.2rem;
   }
 
   a {
@@ -338,11 +389,23 @@ body {
   }
 
   .home & {
-    height: 60vh;
+    // height: 70vh;
     margin-bottom: 0;
 
     h1 {
-      font-size: 4rem;
+      font-size: 3.4rem;
+
+      @include tablet {
+        font-size: 5.5rem;
+      }
+    }
+
+    h2 {
+      font-size: 2rem;
+
+      @include tablet {
+        font-size: 2.25rem;
+      }
     }
   }
 }
@@ -1126,13 +1189,13 @@ button.navbar-toggler {
 
     img {
       width: 100%;
-      max-width: 230px;
+      max-width: 120px;
         // filter: brightness(0) invert(1);
 
-        @include tablet {
+        @include laptop {
           // width: 240px;
-          // max-width: 240px;
-          // margin-left: .5rem;
+          max-width: 150px;
+          margin-left: .5rem;
         }
     }
 }

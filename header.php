@@ -24,18 +24,30 @@
 <div id="page" class="site">
 	<a class="skip-link sr-only" href="#primary"><?php esc_html_e( 'Skip to content', 'dcv3' ); ?></a>
 
+
+
+
+
 <div class="navbar-wrap fixed-top">
-  <?php /*
-  <div class="alert alert-danger alert-dismissible fade show m-0" role="alert">
-    <strong>COVID-19 ALERT:</strong> it doesn't care about your timeline. 
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-  */ ?>
+  <?php /* if alert box is not empty and it's the homepage, show the alert */ ?>
+  <?php if (($footerTagline = get_option('dcv3_options')['dcv3-header-alert']) && (is_front_page())) { 
+    echo '<div class="alert alert-danger alert-dismissible fade show m-0" role="alert">' . $footerTagline . '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>  ';
+  } else { /* do nothing */ } ?>
+
+
+
+  
 
   <nav class="navbar navbar-expand-lg navbar-light bg-white" id="mainNav">
+
+    <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/colby-libraries.svg" />
+    </a>
+
+    <?php /*
     <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+    */ ?>
+
     <button class="btn btn-link ml-auto order-lg-last search-toggler" id="navbarSearchToggler" type="button" aria-label="Toggle search"><i class="fa fa-lg fa-search"></i></button>
     <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="sr-only">Toggle navigation</span>
@@ -82,8 +94,8 @@
 
 
 <div class="site-content">
-
-  <header class="masthead" <?php if(get_field('homepage_banner_image')) { echo 'style="background: url(' . get_field('homepage_banner_image') . ');"'; }?>>
+  
+  <header class="masthead" <?php if(get_field('homepage_banner_image')) { echo 'style="background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)),url(' . get_field('homepage_banner_image') . ');"'; }?>>
     <div class="container h-100">
       <div class="row h-100">
         <div class="col-sm-12 align-self-center">
@@ -91,7 +103,7 @@
           <?php if ( is_front_page() ) : ?>
 
                 <?php if(get_field('homepage_banner_title'))
-                  { echo '<h1 class="font-weight-light">' . get_field('homepage_banner_title') . '</h1>'; } ?>
+                  { echo '<h1>' . get_field('homepage_banner_title') . '</h1>'; } ?>
 
                 <div class="lead">
                   <?php
@@ -156,7 +168,7 @@
                   <?php echo '<h1 class="entry-title">Search Results for: ' . get_search_query() .  '</h1>'; ?>
 
                 <?php elseif ( is_home() ) : ?>
-                  <h1>Archives</h1>
+                  <h1>Digital Colby A-Z</h1>
 
                 <?php elseif ( is_404() ) : ?>
                   <h1>Oops! That page can&rsquo;t be found.</h1>
