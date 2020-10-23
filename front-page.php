@@ -9,7 +9,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Jackrabbit
+ * @package Digital_Colby_V3
  */
 
 get_header();
@@ -26,6 +26,7 @@ get_header();
             <div class="card h-100 border-0">
               <img class="card-img-top" src="https://source.unsplash.com/WLUHO9A_xik/1920x1080" alt="Card image">
               <div class="card-body px-0">
+                <h3>Title</h3>
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
               </div>
               <div class="card-footer p-0 border-0 bg-white">
@@ -38,6 +39,7 @@ get_header();
             <div class="card h-100 border-0">
               <img class="card-img-top" src="https://source.unsplash.com/WLUHO9A_xik/1920x1080" alt="Card image">
               <div class="card-body px-0">
+                <h3>Title</h3>
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
               </div>
               <div class="card-footer p-0 border-0 bg-white">
@@ -50,6 +52,7 @@ get_header();
             <div class="card h-100 border-0">
               <img class="card-img-top" src="https://source.unsplash.com/WLUHO9A_xik/1920x1080" alt="Card image">
               <div class="card-body px-0">
+                <h3>Title</h3>
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
               </div>
               <div class="card-footer p-0 border-0 bg-white">
@@ -62,10 +65,6 @@ get_header();
       </div>
 
     </section>
-
-
-
-
 
 
 
