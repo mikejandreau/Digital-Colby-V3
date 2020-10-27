@@ -350,8 +350,7 @@ body {
 .masthead {
   // height: 25vh;
   // min-height: 200px;
-  // background-image: url('https://source.unsplash.com/WLUHO9A_xik/1920x1080');
-  background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)),url('https://source.unsplash.com/WLUHO9A_xik/1920x1080');
+  background-image: url('/wp-content/uploads/2020/10/miller-renovation.jpg');
   margin-bottom: 2rem;
   color: #fff;
   padding: 5rem 0;
@@ -716,20 +715,20 @@ article {
 
 .triple-feature {
 
-  // background: rgba(255,0,0,0.5);
-
   @include laptop {
     padding: 0 0 6rem;
     margin-top: -4rem;
   }
+
+  img {
+    height: 240px;
+    object-fit: cover;
+  }
 }
 
 .special-feature {
-  // background-image: url('https://source.unsplash.com/BtbjCFUvBXs/1920x1080');
-  background-image: url('https://source.unsplash.com/WLUHO9A_xik/1920x1080');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-image: url('/wp-content/uploads/2020/10/miller-renovation.jpg');
+  @include bgImage;
 }
 
 .featured-block {
