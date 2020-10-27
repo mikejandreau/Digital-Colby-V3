@@ -268,7 +268,13 @@ require get_template_directory() . '/inc/theme-options/theme-options.php';
 
 
 
-
+function dcv3_alphabetize_query_order( $query ) {
+    if ( $query->is_home() && $query->is_main_query() ) {
+        $query->set( 'orderby', 'title' );
+        $query->set( 'order', 'ASC' );
+    }
+}
+add_action( 'pre_get_posts', 'dcv3_alphabetize_query_order' );
 
 
 
