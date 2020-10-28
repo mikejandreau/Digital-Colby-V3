@@ -173,6 +173,7 @@
 
                 <?php if ( is_single() ) : ?>
                   <?php the_title( '<h1 class="entry-title"><span class="sr-only">Article Title: </span>', '</h1>' ); ?>
+                  <?php /*
                   <div class="blog-author-date">
                     <span class="blog-date">Posted on <?php echo get_the_date('M j, Y'); ?></span>
                     <?php 
@@ -185,6 +186,7 @@
                       echo '<span class="blog-author">by <a href="' . $user_url . '">' . $full_name . '</a></span>';
                     ?>
                   </div>
+                  */ ?>
 
                 <?php elseif ( is_author() ) : ?>
                   <?php

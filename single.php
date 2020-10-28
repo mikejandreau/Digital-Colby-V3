@@ -33,12 +33,6 @@ get_header();
 
 
 
-
-
-
-
-
-
 	/*
 	* Custom post navigation (optional)
 	*/
