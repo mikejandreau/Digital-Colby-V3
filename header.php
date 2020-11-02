@@ -158,17 +158,6 @@
                   ?>
                 </div>
 
-                <?php /*
-                <form role="search" method="get" class="form search-form" action="/index.php">
-                  <div class="input-group">
-                    <input name="s" type="text" class="form-control" placeholder="Search this site">
-                    <span class="input-group-btn">
-                      <button type="submit" value="Search" class="btn btn-primary" type="button"><i class="fa fa-search" aria-hidden="true"></i>&nbsp;</button>
-                    </span>
-                  </div>
-                </form>
-                */ ?>
-
           <?php else : ?>
 
                 <?php if ( is_single() ) : ?>

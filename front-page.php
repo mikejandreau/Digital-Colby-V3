@@ -33,8 +33,8 @@ get_header();
               <?php if(get_field('triple_feature_url_1') && get_field('triple_feature_image_1'))
                 { echo '<a class="btn-link" href="' . get_field('triple_feature_url_1') . '"><img class="card-img-top" src="' . get_field('triple_feature_image_1') . '" alt="Card image"></a>'; }?>
               <div class="card-body px-0">
-                <?php if(get_field('triple_feature_heading_1'))
-                  { echo '<h3>' . get_field('triple_feature_heading_1') . '</h3>'; } ?>
+              <?php if(get_field('triple_feature_url_1') && get_field('triple_feature_heading_1'))
+                  { echo '<h3><a href="' . get_field('triple_feature_url_1') . '">' . get_field('triple_feature_heading_1') . '</a></h3>'; } ?>
                 <?php if(get_field('triple_feature_copy_1'))
                   { echo '<p class="card-text">' . get_field('triple_feature_copy_1') . '</p>'; } ?>
               </div>
@@ -47,13 +47,13 @@ get_header();
 
           <div class="col-lg-4 mb-4">
             <div class="card h-100 border-0">
-              <?php if(get_field('triple_feature_image_2')) 
-                { echo '<img class="card-img-top" src="' . get_field('triple_feature_image_2') . '" alt="Card image">'; }?>
+              <?php if(get_field('triple_feature_url_2') && get_field('triple_feature_image_2'))
+                { echo '<a class="btn-link" href="' . get_field('triple_feature_url_2') . '"><img class="card-img-top" src="' . get_field('triple_feature_image_2') . '" alt="Card image"></a>'; }?>
               <div class="card-body px-0">
-                <?php if(get_field('triple_feature_heading_2'))
-                  { echo '<h3>' . get_field('triple_feature_heading_2') . '</h3>'; } ?>
-                <?php if(get_field('triple_feature_copy_2'))
-                  { echo '<p class="card-text">' . get_field('triple_feature_copy_2') . '</p>'; } ?>
+              <?php if(get_field('triple_feature_url_2') && get_field('triple_feature_heading_1'))
+                  { echo '<h3><a href="' . get_field('triple_feature_url_2') . '">' . get_field('triple_feature_heading_1') . '</a></h3>'; } ?>
+                <?php if(get_field('triple_feature_copy_1'))
+                  { echo '<p class="card-text">' . get_field('triple_feature_copy_1') . '</p>'; } ?>
               </div>
               <?php /*<div class="card-footer p-0 border-0 bg-white">
                 <?php if(get_field('triple_feature_url_2') && get_field('triple_feature_link_text_2'))
@@ -64,11 +64,11 @@ get_header();
 
           <div class="col-lg-4 mb-4">
             <div class="card h-100 border-0">
-              <?php if(get_field('triple_feature_image_3')) 
-                { echo '<img class="card-img-top" src="' . get_field('triple_feature_image_3') . '" alt="Card image">'; }?>
+              <?php if(get_field('triple_feature_url_3') && get_field('triple_feature_image_3'))
+                { echo '<a class="btn-link" href="' . get_field('triple_feature_url_3') . '"><img class="card-img-top" src="' . get_field('triple_feature_image_3') . '" alt="Card image"></a>'; }?>
               <div class="card-body px-0">
-                <?php if(get_field('triple_feature_heading_3'))
-                  { echo '<h3>' . get_field('triple_feature_heading_3') . '</h3>'; } ?>
+              <?php if(get_field('triple_feature_url_3') && get_field('triple_feature_heading_3'))
+                  { echo '<h3><a href="' . get_field('triple_feature_url_1') . '">' . get_field('triple_feature_heading_3') . '</a></h3>'; } ?>
                 <?php if(get_field('triple_feature_copy_3'))
                   { echo '<p class="card-text">' . get_field('triple_feature_copy_3') . '</p>'; } ?>
               </div>
@@ -88,17 +88,39 @@ get_header();
 
 
 
+                <?php /**/ ?>
+                
+
+    <section class="featured-section search-feature">
+      <div class="container">
+
+        <h2>Do a search</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing, elit. Saepe, asperiores amet quibusdam. Accusamus hic, commodi facilis eum nemo dolorem mollitia accusantium doloribus recusandae facere impedit quo blanditiis aliquid odio quibusdam!</p>
+
+        <div class="row">
+          <div class="col-sm-9 mb-3">
+            <form role="search" method="get" class="form search-form" action="/index.php">
+              <div class="input-group">
+                <input name="s" type="text" class="form-control" placeholder="Search this site">
+                <span class="input-group-btn">
+                  <button type="submit" value="Search" class="btn btn-primary" type="button"><i class="fa fa-search" aria-hidden="true"></i>&nbsp;</button>
+                </span>
+              </div>
+            </form>
+          </div>
+
+          <div class="col-sm-3 mb-3">
+            <a href="#" class="btn btn-primary btn-block">Blah blah</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
 
 
 
     <div class=home-banner data-flickity='{ "wrapAround": true }'>
-
-
-    <?php /*
-
-        <section class="special-feature" <?php if(get_field('carousel_image_1')) { echo 'style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(' . get_field('carousel_image_1') . ');"'; }?>>
-      */ ?>
-
 
       <div class=home-banner-cell>
         <section class="special-feature" <?php if(get_field('carousel_image_1')) { echo 'style="background: url(' . get_field('carousel_image_1') . ');"'; }?>>
@@ -167,6 +189,14 @@ get_header();
       </div>
 
     </div>
+
+
+
+
+    <?php /*
+
+        <section class="special-feature" <?php if(get_field('carousel_image_1')) { echo 'style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(' . get_field('carousel_image_1') . ');"'; }?>>
+      */ ?>
 
 
 
