@@ -724,6 +724,77 @@ article {
     height: 240px;
     object-fit: cover;
   }
+
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+
+
+  .animation1 {
+    transform: perspective(1px) translateZ(0);
+    transition-duration: 0.3s;
+    transition-property: transform;
+    transition-timing-function: ease-out;
+
+    &:hover {
+      transform: translateY(-1rem);
+    }
+  }
+
+
+  .animation2 {
+
+    .btn-link {
+      overflow: hidden;
+    }
+
+    img {
+        transition-duration: 0.3s;
+        transform: scale(1);
+        transition-timing-function: ease-out;
+    }
+
+    &:hover {
+      img {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+
+  .animation3 {
+    transform: perspective(1px) translateZ(0);
+    transition-duration: 0.3s;
+    transition-property: transform;
+
+
+    .btn-link {
+      overflow: hidden;
+    }
+
+    img {
+        transition-duration: 0.3s;
+        // transform: scale(1);
+    }
+
+    &:hover {
+      // transform: translateY(-1rem);
+
+      img {
+    //     transform: scale(1.2);
+    // transform:rotate(-5deg);
+    transform: rotate(-5deg) scale(1.2);
+      }
+    }
+
+
+  }
+
+
+
 }
 
 .special-feature {
