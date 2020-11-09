@@ -770,7 +770,6 @@ article {
     transition-duration: 0.3s;
     transition-property: transform;
 
-
     .btn-link {
       overflow: hidden;
     }
@@ -789,8 +788,71 @@ article {
     transform: rotate(-5deg) scale(1.2);
       }
     }
+  }
 
 
+
+
+
+
+
+
+
+
+  .animation4 {
+    filter: grayscale(100%);
+    transform: perspective(1px) translateZ(0);
+    transition-duration: 0.3s;
+
+    &:hover {
+      transform: translateY(-1rem);
+      filter: grayscale(0%);
+    }
+  }
+
+
+  .animation5 {
+
+    .btn-link {
+      overflow: hidden;
+    }
+
+    img {
+      transition-duration: 0.3s;
+      transform: scale(1);
+      transition-timing-function: ease-out;
+      filter: grayscale(100%);
+    }
+
+    &:hover {
+      img {
+        transform: scale(1.2);
+        filter: grayscale(0%);
+      }
+    }
+  }
+
+
+  .animation6 {
+    transform: perspective(1px) translateZ(0);
+    transition-duration: 0.3s;
+    transition-property: transform;
+
+    .btn-link {
+      overflow: hidden;
+    }
+
+    img {
+      transition-duration: 0.3s;
+      filter: grayscale(100%);
+    }
+
+    &:hover {
+      img {
+        transform: rotate(-5deg) scale(1.2);
+        filter: grayscale(0%);
+      }
+    }
   }
 
 

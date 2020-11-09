@@ -80,6 +80,75 @@ get_header();
           </div>
 
         </div>
+
+
+
+
+
+
+
+        <div class="row">
+
+
+
+
+
+
+
+          <div class="col-lg-4 mb-4">
+            <div class="card h-100 border-0 animation4">
+              <?php if(get_field('triple_feature_url_1') && get_field('triple_feature_image_1'))
+                { echo '<a class="btn-link" href="' . get_field('triple_feature_url_1') . '"><img class="card-img-top" src="' . get_field('triple_feature_image_1') . '" alt="Card image"></a>'; }?>
+              <div class="card-body px-0">
+              <?php if(get_field('triple_feature_url_1') && get_field('triple_feature_heading_1'))
+                  { echo '<h3><a href="' . get_field('triple_feature_url_1') . '">' . get_field('triple_feature_heading_1') . '</a></h3>'; } ?>
+                <?php if(get_field('triple_feature_copy_1'))
+                  { echo '<p class="card-text">' . get_field('triple_feature_copy_1') . '</p>'; } ?>
+              </div>
+              <?php /*<div class="card-footer p-0 border-0 bg-white">
+                <?php if(get_field('triple_feature_url_1') && get_field('triple_feature_link_text_1'))
+                  { echo '<a class="btn-link" href="' . get_field('triple_feature_url_1') . '">' . get_field('triple_feature_link_text_1') . ' <i class="fas fa-arrow-right"></i></a>'; } ?>
+              </div>*/ ?>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mb-4">
+            <div class="card h-100 border-0 animation5">
+              <?php if(get_field('triple_feature_url_2') && get_field('triple_feature_image_2'))
+                { echo '<a class="btn-link" href="' . get_field('triple_feature_url_2') . '"><img class="card-img-top" src="' . get_field('triple_feature_image_2') . '" alt="Card image"></a>'; }?>
+              <div class="card-body px-0">
+              <?php if(get_field('triple_feature_url_2') && get_field('triple_feature_heading_1'))
+                  { echo '<h3><a href="' . get_field('triple_feature_url_2') . '">' . get_field('triple_feature_heading_1') . '</a></h3>'; } ?>
+                <?php if(get_field('triple_feature_copy_1'))
+                  { echo '<p class="card-text">' . get_field('triple_feature_copy_1') . '</p>'; } ?>
+              </div>
+              <?php /*<div class="card-footer p-0 border-0 bg-white">
+                <?php if(get_field('triple_feature_url_2') && get_field('triple_feature_link_text_2'))
+                  { echo '<a class="btn-link" href="' . get_field('triple_feature_url_2') . '">' . get_field('triple_feature_link_text_2') . ' <i class="fas fa-arrow-right"></i></a>'; } ?>
+              </div>*/ ?>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mb-4">
+            <div class="card h-100 border-0 animation6">
+              <?php if(get_field('triple_feature_url_3') && get_field('triple_feature_image_3'))
+                { echo '<a class="btn-link" href="' . get_field('triple_feature_url_3') . '"><img class="card-img-top" src="' . get_field('triple_feature_image_3') . '" alt="Card image"></a>'; }?>
+              <div class="card-body px-0">
+              <?php if(get_field('triple_feature_url_3') && get_field('triple_feature_heading_3'))
+                  { echo '<h3><a href="' . get_field('triple_feature_url_1') . '">' . get_field('triple_feature_heading_3') . '</a></h3>'; } ?>
+                <?php if(get_field('triple_feature_copy_3'))
+                  { echo '<p class="card-text">' . get_field('triple_feature_copy_3') . '</p>'; } ?>
+              </div>
+              <?php /*<div class="card-footer p-0 border-0 bg-white">
+                <?php if(get_field('triple_feature_url_3') && get_field('triple_feature_link_text_3'))
+                  { echo '<a class="btn-link" href="' . get_field('triple_feature_url_3') . '">' . get_field('triple_feature_link_text_3') . ' <i class="fas fa-arrow-right"></i></a>'; } ?>
+              </div>*/ ?>
+            </div>
+          </div>
+
+        </div>
+
+
       </div>
 
     </section>
