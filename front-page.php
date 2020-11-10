@@ -503,68 +503,73 @@ get_header();
   <div class="featured-section">
     <div class="container">
       <div class="feature-block-container">
-      <div class="row">
 
 
+        <div class="row">
 
 
-        <div class="col-md-8">
-          <div class="feature-block feature-wide" style="background: red;">
-            <div class="feature-block-info">
-            <h3>Title</h3>
-            <p>something about this thing</p>
-          </div>
-          </div>
-
-          <div class="row">
-            <div class="col-md-6">
-              <div class="feature-block" style="background: green;">
-                <div class="feature-block-info">
-                <h3>Title</h3>
-                <p>something about this thing</p>
-              </div>
+          <div class="col-md-12 col-lg-8">
+            <?php if(get_field('bottom_feature_url_1'))
+            { echo '<a class="feature-block-link feature-wide" href="' . get_field('bottom_feature_url_1') . '">'; } ?>
+            <div class="feature-block" <?php if(get_field('bottom_feature_image_1')) { echo 'style="background: url(' . get_field('bottom_feature_image_1') . ');"'; }?>>
+              <div class="feature-block-info">
+                <?php if(get_field('bottom_feature_heading_1'))
+                { echo '<h3>' . get_field('bottom_feature_heading_1') . '</h3>'; } ?>
+                <?php if(get_field('bottom_feature_description_1'))
+                { echo '<p>' . get_field('bottom_feature_description_1') . '</p>'; } ?>
               </div>
             </div>
-            <div class="col-md-6">
-              <div class="feature-block" style="background: blue;">
-                <div class="feature-block-info">
-                <h3>Title</h3>
-                <p>something about this thing</p>
+            <?php if(get_field('bottom_feature_url_1'))
+            { echo '</a>'; } ?>
+
+            <div class="row">
+              <div class="col-md-6">
+                <?php if(get_field('bottom_feature_url_2'))
+                { echo '<a class="feature-block-link" href="' . get_field('bottom_feature_url_2') . '">'; } ?>
+                <div class="feature-block" <?php if(get_field('bottom_feature_image_2')) { echo 'style="background: url(' . get_field('bottom_feature_image_2') . ');"'; }?>>
+                  <div class="feature-block-info">
+                    <?php if(get_field('bottom_feature_heading_2'))
+                    { echo '<h3>' . get_field('bottom_feature_heading_2') . '</h3>'; } ?>
+                    <?php if(get_field('bottom_feature_description_2'))
+                    { echo '<p>' . get_field('bottom_feature_description_2') . '</p>'; } ?>
+                  </div>
+                </div>
+                <?php if(get_field('bottom_feature_url_2'))
+                { echo '</a>'; } ?>
               </div>
+              <div class="col-md-6">
+                <?php if(get_field('bottom_feature_url_3'))
+                { echo '<a class="feature-block-link" href="' . get_field('bottom_feature_url_3') . '">'; } ?>
+                <div class="feature-block" <?php if(get_field('bottom_feature_image_3')) { echo 'style="background: url(' . get_field('bottom_feature_image_3') . ');"'; }?>>
+                  <div class="feature-block-info">
+                    <?php if(get_field('bottom_feature_heading_3'))
+                    { echo '<h3>' . get_field('bottom_feature_heading_3') . '</h3>'; } ?>
+                    <?php if(get_field('bottom_feature_description_3'))
+                    { echo '<p>' . get_field('bottom_feature_description_3') . '</p>'; } ?>
+                  </div>
+                </div>
+                <?php if(get_field('bottom_feature_url_3'))
+                { echo '</a>'; } ?>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="col-md-4">
-          <div class="feature-block feature-tall" style="background: yellow;">
-            <div class="feature-block-info">
-            <h3>Title</h3>
-            <p>something about this thing</p>
+          <div class="col-md-12 col-lg-4">
+            <?php if(get_field('bottom_feature_url_4'))
+            { echo '<a class="feature-block-link feature-tall" href="' . get_field('bottom_feature_url_4') . '">'; } ?>
+            <div class="feature-block" <?php if(get_field('bottom_feature_image_4')) { echo 'style="background: url(' . get_field('bottom_feature_image_4') . ');"'; }?>>
+              <div class="feature-block-info">
+                    <?php if(get_field('bottom_feature_heading_4'))
+                    { echo '<h3>' . get_field('bottom_feature_heading_4') . '</h3>'; } ?>
+                <?php if(get_field('bottom_feature_description_4'))
+                { echo '<p>' . get_field('bottom_feature_description_4') . '</p>'; } ?>
+              </div>
+            </div>
+            <?php if(get_field('bottom_feature_url_4'))
+            { echo '</a>'; } ?>
           </div>
-          </div>
+
         </div>
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
