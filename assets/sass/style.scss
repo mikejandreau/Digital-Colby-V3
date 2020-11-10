@@ -699,8 +699,6 @@ article {
 
 
 
-
-
 // section {
 //   padding: 6rem 0;
 // }
@@ -713,10 +711,48 @@ article {
   }
 }
 
+.feature-block-container {
+    // height: 50vh;
+  background: tan;
+}
+
+.feature-block {
+  // margin-bottom: 1.5rem;
+    // height: 50%;
+    position: relative;
+    min-height: 200px;
+
+    @include laptop {
+      min-height: 300px;
+    }
+
+
+  &.feature-wide {
+    margin-bottom: 1.5rem;
+  }
+
+  &.feature-tall {
+    height: 100%;
+  }
+}
+
+.feature-block-info {
+  background: rgba(255,255,255,.5);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+
+
+
+
+
 .triple-feature {
 
   @include laptop {
-    padding: 0 0 6rem;
+    // padding: 0 0 6rem;
     margin-top: -4rem;
   }
 

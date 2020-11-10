@@ -80,20 +80,7 @@ get_header();
           </div>
 
         </div>
-
-
-
-
-
-
-
         <div class="row">
-
-
-
-
-
-
 
           <div class="col-lg-4 mb-4">
             <div class="card h-100 border-0 animation4">
@@ -161,7 +148,7 @@ get_header();
                 
 
     <section class="featured-section search-feature">
-      <div class="container">
+      <div class="container bg-dark pt-3">
 
         <h2>Do a search</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing, elit. Saepe, asperiores amet quibusdam. Accusamus hic, commodi facilis eum nemo dolorem mollitia accusantium doloribus recusandae facere impedit quo blanditiis aliquid odio quibusdam!</p>
@@ -515,8 +502,79 @@ get_header();
 
   <div class="featured-section">
     <div class="container">
+      <div class="feature-block-container">
       <div class="row">
 
+
+
+
+        <div class="col-md-8">
+          <div class="feature-block feature-wide" style="background: red;">
+            <div class="feature-block-info">
+            <h3>Title</h3>
+            <p>something about this thing</p>
+          </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="feature-block" style="background: green;">
+                <div class="feature-block-info">
+                <h3>Title</h3>
+                <p>something about this thing</p>
+              </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="feature-block" style="background: blue;">
+                <div class="feature-block-info">
+                <h3>Title</h3>
+                <p>something about this thing</p>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="feature-block feature-tall" style="background: yellow;">
+            <div class="feature-block-info">
+            <h3>Title</h3>
+            <p>something about this thing</p>
+          </div>
+          </div>
+        </div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <?php /*
         <div class="column col-sm-12">
           <h2>Featured Collections</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis explicabo accusantium atque repudiandae distinctio esse, porro ullam recusandae, tenetur perspiciatis beatae odit maxime facilis reprehenderit pariatur repellat quaerat magni, a.</p>
@@ -570,7 +628,7 @@ get_header();
               $loop = new WP_Query( $args );
 
               while ( $loop->have_posts() ) : $loop->the_post(); 
-                /* pull category for each unique post using the ID  */
+                // pull category for each unique post using the ID 
                 $terms = get_the_terms( $post->ID, 'category' ); 
                 // $terms = get_the_terms( $post->ID, 'portfolio-categories' ); 
                 if ( $terms && ! is_wp_error( $terms ) ) : 
@@ -583,9 +641,9 @@ get_header();
                 else : 
                   $tax = '';         
                 endif; 
-                /* Insert category name into portfolio-item class */ 
+                // Insert category name into portfolio-item class 
 
-                /* grab the url for the full size featured image */
+                // grab the url for the full size featured image
                   $featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full');
 
                 echo '
@@ -614,10 +672,9 @@ get_header();
           </div>
 
           <a class="btn btn-primary" href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">View All</a>
-
-
-
         </div>
+        */ ?>
+
 
       </div>
     </div>

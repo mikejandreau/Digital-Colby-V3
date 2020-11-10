@@ -75,7 +75,7 @@
 
 			</div>
 
-			<div class="copyright">&copy; Copyright <?php echo date("Y"); ?> <?php bloginfo( 'name' ); ?></div>
+			<div class="copyright">&copy; Copyright <?php echo date("Y"); ?> Colby College Libraries</div>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 
