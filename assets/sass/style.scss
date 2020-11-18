@@ -724,6 +724,23 @@ article {
   height: 100%;
   margin: 0 0 1.5rem;
 
+
+  &:before {
+    content: '';
+    position: absolute;
+    display: block;
+    left: -5px;
+    background-repeat: no-repeat;
+    width: calc(100% + 10px);
+    height: calc(100% + 6px);
+    bottom: -3px;
+    // background-image: url(/wp-content/themes/digital-colby-v3/assets/img/cut-bottom.svg);
+    background-image: url(assets/img/cut-bottom.svg);
+    background-position: bottom;
+    pointer-events: none;
+    z-index: 20;
+  }
+
   @include bgImage;
 
   @include laptop {
