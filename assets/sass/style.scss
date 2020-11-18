@@ -808,6 +808,30 @@ article {
 
 
 
+
+    .triple-feature-link {
+      overflow: hidden;
+      position: relative;
+
+
+  &:before {
+    content: '';
+    position: absolute;
+    display: block;
+    left: -5px;
+    background-repeat: no-repeat;
+    width: calc(100% + 10px);
+    height: calc(100% + 6px);
+    bottom: -3px;
+    // background-image: url(/wp-content/themes/digital-colby-v3/assets/img/cut-bottom.svg);
+    background-image: url(assets/img/cut-bottom.svg);
+    background-position: bottom;
+    pointer-events: none;
+    z-index: 20;
+  }
+
+    }
+
   .animation1 {
     transform: perspective(1px) translateZ(0);
     transition-duration: 0.3s;
@@ -821,10 +845,6 @@ article {
 
 
   .animation2 {
-
-    .btn-link {
-      overflow: hidden;
-    }
 
     img {
         transition-duration: 0.3s;
@@ -844,10 +864,6 @@ article {
     transform: perspective(1px) translateZ(0);
     transition-duration: 0.3s;
     transition-property: transform;
-
-    .btn-link {
-      overflow: hidden;
-    }
 
     img {
         transition-duration: 0.3s;
@@ -888,10 +904,6 @@ article {
 
   .animation5 {
 
-    .btn-link {
-      overflow: hidden;
-    }
-
     img {
       transition-duration: 0.3s;
       transform: scale(1);
@@ -912,10 +924,6 @@ article {
     transform: perspective(1px) translateZ(0);
     transition-duration: 0.3s;
     transition-property: transform;
-
-    .btn-link {
-      overflow: hidden;
-    }
 
     img {
       transition-duration: 0.3s;
