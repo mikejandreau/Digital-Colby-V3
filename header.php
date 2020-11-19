@@ -75,7 +75,7 @@
     <div class="nav-search-inner">
       <div class="container-fluid">
         <div class="d-flex justify-content-between">
-          <form role="search" method="get" class="form search-form" action="/index.php">
+          <form role="search" method="get" class="form search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
             <div class="input-group">
               <input name="s" type="text" class="form-control" placeholder="Search this site">
               <span class="input-group-btn">

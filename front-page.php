@@ -155,7 +155,7 @@ get_header();
 
         <div class="row">
           <div class="col-sm-9 mb-3">
-            <form role="search" method="get" class="form search-form" action="/index.php">
+            <form role="search" method="get" class="form search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
               <div class="input-group">
                 <input name="s" type="text" class="form-control" placeholder="Search this site">
                 <span class="input-group-btn">
