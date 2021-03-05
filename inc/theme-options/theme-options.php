@@ -23,13 +23,21 @@ $dcv3_sections = [
     //     'title' => 'Theme Settings',
     //     'desc'  => 'General theme settings.'
     // ],
-    // 'section-social-settings' => [
-    //     'title' => 'Social Settings',
-    //     'desc'  => 'Add the full URLs of your social media profiles to show them in the footer. Only the text fields with links will show up on the front end - blank fields won\'t be displayed.'
-    // ],
     'section-header-alert' => [
         'title' => 'Header Alert',
         'desc'  => 'This is the text that will appear in the alert at the top of the homepage. To hide the alert, leave is field blank.'
+    ],
+    'section-footer-info' => [
+        'title' => 'Footer Info',
+        'desc'  => 'This is descriptive text that appears in the footer.'
+    ],
+    'section-footer-contact' => [
+        'title' => 'Footer Contact Info',
+        'desc'  => 'This is the address, phone, fax, and email address found in the footer.'
+    ],
+    'section-footer-social' => [
+        'title' => 'Social Settings',
+        'desc'  => 'Add the full URLs of your social media profiles to show them in the footer. Only the text fields with links will show up on the front end - blank fields won\'t be displayed.'
     ]
 ];
 
@@ -45,38 +53,6 @@ $dcv3_fields = [
     //     'desc'     => 'Set your default logo. Upload or choose an existing one.',
     //     'sanitize' => ''
     // ],
-    // 'dcv3-social-facebook' => [
-    //     'title'    => 'Facebook Profile',
-    //     'type'     => 'text',
-    //     'section'  => 'section-social-settings',
-    //     'default'  => '',
-    //     'desc'     => '',
-    //     'sanitize' => 'full'
-    // ],
-    // 'dcv3-social-twitter' => [
-    //     'title'    => 'Twitter Profile',
-    //     'type'     => 'text',
-    //     'section'  => 'section-social-settings',
-    //     'default'  => '',
-    //     'desc'     => '',
-    //     'sanitize' => 'full'
-    // ],
-    // 'dcv3-social-instagram' => [
-    //     'title'    => 'Instagram Profile',
-    //     'type'     => 'text',
-    //     'section'  => 'section-social-settings',
-    //     'default'  => '',
-    //     'desc'     => '',
-    //     'sanitize' => 'full'
-    // ],
-    // 'dcv3-social-linkedin' => [
-    //     'title'    => 'LinkedIn Profile',
-    //     'type'     => 'text',
-    //     'section'  => 'section-social-settings',
-    //     'default'  => '',
-    //     'desc'     => '',
-    //     'sanitize' => 'full'
-    // ],
     'dcv3-header-alert' => [
         'title'    => 'Alert Text',
         'type'     => 'textarea',
@@ -84,6 +60,118 @@ $dcv3_fields = [
         'default'  => '',
         'desc'     => '',
         'sanitize' => ''
+    ],
+    'dcv3-footer-info' => [
+        'title'    => 'Footer Text',
+        'type'     => 'textarea',
+        'section'  => 'section-footer-info',
+        'default'  => '',
+        'desc'     => '',
+        'sanitize' => ''
+    ],
+    'dcv3-footer-address-name' => [
+        'title'    => 'Address Name',
+        'type'     => 'text',
+        'section'  => 'section-footer-contact',
+        'default'  => '',
+        'desc'     => '',
+        'sanitize' => ''
+    ],
+    'dcv3-footer-street-address' => [
+        'title'    => 'Street Address',
+        'type'     => 'text',
+        'section'  => 'section-footer-contact',
+        'default'  => '',
+        'desc'     => '',
+        'sanitize' => ''
+    ],
+    'dcv3-footer-po-box' => [
+        'title'    => 'PO Box',
+        'type'     => 'text',
+        'section'  => 'section-footer-contact',
+        'default'  => '',
+        'desc'     => '',
+        'sanitize' => ''
+    ],
+    'dcv3-footer-city-state-zip' => [
+        'title'    => 'City State Zip',
+        'type'     => 'text',
+        'section'  => 'section-footer-contact',
+        'default'  => '',
+        'desc'     => '',
+        'sanitize' => ''
+    ],
+    'dcv3-footer-phone' => [
+        'title'    => 'Phone Number',
+        'type'     => 'text',
+        'section'  => 'section-footer-contact',
+        'default'  => '',
+        'desc'     => '',
+        'sanitize' => ''
+    ],
+    'dcv3-footer-fax' => [
+        'title'    => 'Fax Number',
+        'type'     => 'text',
+        'section'  => 'section-footer-contact',
+        'default'  => '',
+        'desc'     => '',
+        'sanitize' => ''
+    ],
+    'dcv3-footer-email' => [
+        'title'    => 'Email Address',
+        'type'     => 'text',
+        'section'  => 'section-footer-contact',
+        'default'  => '',
+        'desc'     => '',
+        'sanitize' => ''
+    ],
+    'dcv3-social-instagram' => [
+        'title'    => 'Instagram Profile',
+        'type'     => 'text',
+        'section'  => 'section-footer-social',
+        'default'  => '',
+        'desc'     => '',
+        'sanitize' => 'full'
+    ],
+    'dcv3-social-twitter' => [
+        'title'    => 'Twitter Profile',
+        'type'     => 'text',
+        'section'  => 'section-footer-social',
+        'default'  => '',
+        'desc'     => '',
+        'sanitize' => 'full'
+    ],
+    'dcv3-social-facebook' => [
+        'title'    => 'Facebook Profile',
+        'type'     => 'text',
+        'section'  => 'section-footer-social',
+        'default'  => '',
+        'desc'     => '',
+        'sanitize' => 'full'
+    ],
+    'dcv3-social-youtube' => [
+        'title'    => 'YouTube Profile',
+        'type'     => 'text',
+        'section'  => 'section-footer-social',
+        'default'  => '',
+        'desc'     => '',
+        'sanitize' => 'full'
+    ],
+    'dcv3-social-vimeo' => [
+        'title'    => 'Vimeo Profile',
+        'type'     => 'text',
+        'section'  => 'section-footer-social',
+        'default'  => '',
+        'desc'     => '',
+        'sanitize' => 'full'
+    ],
+    'dcv3-social-rss' => [
+        'title'    => 'RSS Feed',
+        'type'     => 'text',
+        'section'  => 'section-footer-social',
+        'default'  => '',
+        'desc'     => '',
+        'sanitize' => 'full'
     ]
 ];
 
