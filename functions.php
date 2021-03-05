@@ -51,6 +51,7 @@ if ( ! function_exists( 'dcv3_setup' ) ) :
 		register_nav_menus(
 			array(
 				'menu-1' => esc_html__( 'Primary', 'dcv3' ),
+				'menu-2' => esc_html__( 'Footer Menu', 'dcv3' ),
 			)
 		);
 		
