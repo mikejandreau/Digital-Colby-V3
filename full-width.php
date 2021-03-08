@@ -14,7 +14,7 @@ get_header();
 	<div class="container">
 		<div class="row">
 
-			<div class="col-sm-8">
+			<div class="col-sm-12">
 				<main id="primary" class="site-main">
 
 					<?php
@@ -32,11 +32,7 @@ get_header();
 					?>
 				</main><!-- #main -->
 			</div>
-
-			<div class="col-sm-4">
-				<?php get_sidebar(); ?>
-			</div>
-
+			
 		</div>
 	</div>
 </div>
