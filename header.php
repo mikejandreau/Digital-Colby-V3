@@ -122,9 +122,7 @@
 
     <?php endif; ?>
   >
-
-
-
+  
     <div class="container h-100">
       <div class="row h-100">
         <div class="col-sm-12 align-self-center">
@@ -189,7 +187,6 @@
 
                 <?php elseif ( is_home() ) : ?>
                   <h1 class="entry-title"><?php echo apply_filters( 'the_title', get_the_title( get_option( 'page_for_posts' ) ) ); ?></h1>
-
 
                 <?php elseif ( is_404() ) : ?>
                   <h1>Oops! That page can&rsquo;t be found.</h1>
