@@ -93,49 +93,34 @@
 
 
 
+
+
+
 <div class="site-content">
   
   <header class="masthead" 
+    <?php if ( is_front_page() ) : ?>
+      <?php if(get_field('homepage_banner_image')) { echo 'style="background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)),url(' . get_field('homepage_banner_image') . ');"'; } ?>
 
+    <?php elseif ( is_home() ): ?>
+      <?php 
+        $featuredImagePostsPage = get_the_post_thumbnail_url( get_option( 'page_for_posts' ), 'large' );
+        if  ( ! empty( $featuredImagePostsPage ) ) {
+          echo 'style="background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)),url(' . $featuredImagePostsPage . ');"';
+        }
+      ?>
 
+    <?php elseif ( has_post_thumbnail() ): ?>
+      <?php 
+        $featuredImage = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full'); 
+        if  ( ! empty( $featuredImage ) ) {
+          echo 'style="background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)),url(' . $featuredImage[0] . ');"';
+        }
+      ?>
 
+    <?php else : ?>
 
-
-
-                <?php if ( is_front_page() ) : ?>
-
-
-
-  <?php if(get_field('homepage_banner_image')) { echo 'style="background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)),url(' . get_field('homepage_banner_image') . ');"'; } ?>
-
-                <?php elseif ( has_post_thumbnail() ): ?>
-
-
-<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full'); ?>
-<?php echo 'style="background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)),url(' . $image[0] . ');"'; ?>
-
-
-
-
-
-                <?php else : ?>
-
-                <?php endif; ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <?php endif; ?>
   >
 
 
@@ -203,7 +188,8 @@
                   <?php echo '<h1 class="entry-title">Search Results for: ' . get_search_query() .  '</h1>'; ?>
 
                 <?php elseif ( is_home() ) : ?>
-                  <h1>Digital Colby A-Z</h1>
+                  <h1 class="entry-title"><?php echo apply_filters( 'the_title', get_the_title( get_option( 'page_for_posts' ) ) ); ?></h1>
+
 
                 <?php elseif ( is_404() ) : ?>
                   <h1>Oops! That page can&rsquo;t be found.</h1>
@@ -222,5 +208,7 @@
       </div>
     </div>
   </header>
+
+
 
 
