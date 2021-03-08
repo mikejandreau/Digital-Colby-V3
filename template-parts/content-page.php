@@ -14,9 +14,9 @@
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
-	*/ ?>
+	?>
 
-	<?php dcv3_post_thumbnail(); ?>
+	<?php dcv3_post_thumbnail(); */ ?>
 
 	<div class="entry-content">
 		<?php
