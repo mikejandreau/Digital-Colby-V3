@@ -121,7 +121,7 @@ msgstr ""
 
 #. translators: 1: list of categories.
 #: inc/template-tags.php:66
-msgid "Posted in %1$s"
+msgid "Collection %1$s"
 msgstr ""
 
 #. translators: used between list items, there is a space after the comma
