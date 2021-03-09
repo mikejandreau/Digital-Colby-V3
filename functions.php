@@ -279,38 +279,6 @@ add_action( 'pre_get_posts', 'dcv3_alphabetize_query_order' );
 
 
 
-/**
- * FAVICONS
- * Add custom favicons to admin dashboard and front end of site
- */
-// function dcv3_admin_favicon() {
-// 	$admin_favicon_url = get_stylesheet_directory_uri() . '/assets/favicons';
-// 	echo '<link rel="shortcut icon" href="' . $admin_favicon_url . '/admin-favicon.ico" />';
-// }
-// add_action('login_head', 'dcv3_admin_favicon');
-// add_action('admin_head', 'dcv3_admin_favicon');
-
-// function dcv3_main_favicon() {
-// 	$main_favicon_url = get_stylesheet_directory_uri() . '/assets/favicons';
-// 	echo '
-//     <link rel="shortcut icon" href="' . $main_favicon_url . '/favicon.ico" type="image/x-icon" />
-//     <link rel="apple-touch-icon" href="' . $main_favicon_url . '/apple-touch-icon.png" />
-//     <link rel="apple-touch-icon" sizes="57x57" href="' . $main_favicon_url . '/apple-touch-icon-57x57.png" />
-//     <link rel="apple-touch-icon" sizes="72x72" href="' . $main_favicon_url . '/apple-touch-icon-72x72.png" />
-//     <link rel="apple-touch-icon" sizes="76x76" href="' . $main_favicon_url . '/apple-touch-icon-76x76.png" />
-//     <link rel="apple-touch-icon" sizes="114x114" href="' . $main_favicon_url . '/apple-touch-icon-114x114.png" />
-//     <link rel="apple-touch-icon" sizes="120x120" href="' . $main_favicon_url . '/apple-touch-icon-120x120.png" />
-//     <link rel="apple-touch-icon" sizes="144x144" href="' . $main_favicon_url . '/apple-touch-icon-144x144.png" />
-//     <link rel="apple-touch-icon" sizes="152x152" href="' . $main_favicon_url . '/apple-touch-icon-152x152.png" />
-// 	';
-// }
-// add_action('wp_head', 'dcv3_main_favicon');
-
-
-
-
-
-
 
 // numbered pagination
 function dcv3_numeric_posts_nav() {
