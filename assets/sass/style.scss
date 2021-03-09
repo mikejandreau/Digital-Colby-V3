@@ -145,7 +145,7 @@ $color_primary: #2c3e50;
 $color_white: #fff;
 $color_offwhite: #efefef;
 $color_lightgray: #f9fafa;
-$color_mediumgray: #f2f4f5;
+$color_mediumgray: #343a40;
 $color_darkgray: #a6a6a6;
 
 $color_text_headings: #191919;
@@ -383,11 +383,19 @@ body {
     padding: 8rem 0 10rem;
   }
 
+  @include desktop {
+    padding: 10rem 0 14rem;
+  }
+
   h1 {
-    font-size: 3rem;
+    font-size: 2rem;
     margin-top: 1rem;
     color: #fff;
     line-height: 1;
+
+    @include phablet {
+      font-size: 3rem;
+    }
   }
 
   h2 {
@@ -411,6 +419,8 @@ body {
   .home & {
     // height: 70vh;
     margin-bottom: 0;
+
+    // padding: 8rem 0 10rem;
 
     h1 {
       font-size: 3.4rem;
@@ -1472,7 +1482,7 @@ button.navbar-toggler {
   padding: .5rem .75rem;
   font-size: 1rem;
   line-height: 1.25;
-  // border-radius: .25rem;
+  border-radius: 3px;
   -webkit-transition: all .15s ease-in-out;
   transition: all .15s ease-in-out;
 
@@ -1536,10 +1546,9 @@ button.navbar-toggler {
   }
 
 
-
   .site-footer {
     padding: 3rem 0 1.5rem;
-    background-color: #343a40;
+    background-color: $color_mediumgray;
 
     h4 {
       font-size: 1.4rem;
@@ -1717,6 +1726,42 @@ body {
 
 
 
+// post navigation at bottom of blog page
+.paged-navigation {
+    margin: 2rem 0;
+
+    ul {
+        margin: 0 0 3rem;
+        padding: 0;
+    }
+
+    li {
+        display: inline;
+
+        a,
+        &.disabled {
+            color: #fff;
+            text-decoration: none;
+            background-color: lighten($color_mediumgray, 20%);
+            border-radius: 3px;
+            cursor: pointer;
+            padding: 8px;
+            padding: 0.5rem;
+        }
+
+        a:hover,
+        &.active a {
+            color: #fff;
+            background-color: $color_mediumgray;
+        }
+
+        a:focus {
+            color: #fff;
+            background-color: darken($color_mediumgray, 10%);
+        }
+    }
+}
+
 
 
 
@@ -1731,4 +1776,12 @@ body {
 }
 
 
+
+
+// WP Forms override 
+div.wpforms-container-full .wpforms-form input.wpforms-field-medium, 
+div.wpforms-container-full .wpforms-form select.wpforms-field-medium, 
+div.wpforms-container-full .wpforms-form .wpforms-field-row.wpforms-field-medium {
+    max-width: 100%;
+}
 
