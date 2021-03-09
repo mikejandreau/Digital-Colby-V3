@@ -26,7 +26,7 @@ get_header();
 				the_archive_description( '<div class="archive-description">', '</div>' );
 				?>
 			</header>
-*/ ?>
+			*/ ?>
 
 			<?php
 			/* Start the Loop */
@@ -42,7 +42,8 @@ get_header();
 
 			endwhile;
 
-			the_posts_navigation();
+			// the_posts_navigation();
+			dcv3_numeric_posts_nav();
 
 		else :
 
