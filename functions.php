@@ -279,39 +279,6 @@ add_action( 'pre_get_posts', 'dcv3_alphabetize_query_order' );
 
 
 
-
-
-/**
- * CUSTOM LOGIN SCREEN
- * overrides default WP logo, background image/color, and form styles
- */
-// function dcv3_login_stylesheet() {
-// 	wp_enqueue_style( 'custom-login', get_stylesheet_directory_uri() . '/assets/css/login-style.css' );
-// }
-// add_action( 'login_enqueue_scripts', 'dcv3_login_stylesheet' );
-
-// /**
-//  * CUSTOM LOGIN SCREEN LOGO LINK
-//  * Redirect custom login logo link to homepage
-//  */
-// function dcv3_login_logo_url() {
-//     return home_url();
-// }
-// add_filter( 'login_headerurl', 'dcv3_login_logo_url' );
-
-// /**
-//  * CUSTOM LOGIN SCREEN LOGO TITLE
-//  * Update custom login logo page title
-//  */
-// function dcv3_login_logo_url_title( $title ) {
-// 	return esc_attr( get_bloginfo( 'title' ) );
-// }
-// add_filter( 'login_headertitle', 'dcv3_login_logo_url_title' );
-
-
-
-
-
 /**
  * FAVICONS
  * Add custom favicons to admin dashboard and front end of site
@@ -340,18 +307,6 @@ add_action( 'pre_get_posts', 'dcv3_alphabetize_query_order' );
 // add_action('wp_head', 'dcv3_main_favicon');
 
 
-
-// function dcv3_password_form() {
-//     global $post;
-//     $label = 'pwbox-'.( empty( $post->ID ) ? rand() : $post->ID );
-//     $o = '<form action="' . esc_url( site_url( 'wp-login.php?action=postpass', 'login_post' ) ) . '" method="post">
-//     ' . __( "To view this protected post, enter the password below:" ) . '
-//     <label for="' . $label . '">' . __( "Password:" ) . ' </label><input name="post_password" id="' . $label . '" type="password" size="20" maxlength="20" /><input type="submit" name="Submit" value="' . esc_attr__( "Submit" ) . '" />
-//     </form>
-//     ';
-//     return $o;
-// }
-// add_filter( 'the_password_form', 'dcv3_password_form' );
 
 
 
